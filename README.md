@@ -1,4 +1,13 @@
-<div class=outer_container>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" /> 
+    <title>Link CSS to HTML</title>
+</head>
+
+<body>
+  <div class=outer_container>
   <div class=inner_container>
     <canvas id="canvas" height="310" width="500"></canvas>
 
@@ -50,4 +59,5 @@
   <audio id="ccu_audio" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Close_central_unrounded_vowel.ogg"></audio>
   <audio id="ccr_audio" src="https://upload.wikimedia.org/wikipedia/commons/6/66/Close_central_rounded_vowel.ogg"></audio>
   <audio id="cbu_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Close_back_unrounded_vowel.ogg"></audio>
+</body>
   <audio id="cbr_audio" src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Close_back_rounded_vowel.ogg"></audio>
