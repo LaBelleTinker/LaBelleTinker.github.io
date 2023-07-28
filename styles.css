@@ -1,0 +1,89 @@
+.selected {
+  color: blue !important;
+}
+
+.vowel:hover {
+  color: red;
+  cursor: pointer;
+  outline-style: none;
+  user-select: none;
+}
+
+.vowel {
+  font-size: 20px;
+  }
+  
+ .outer_container{
+   position: relative;
+   margin: 20px;
+ }
+
+.inner_container {
+  position: relative;
+}
+.inner_container canvas, #overlay {
+  position: absolute;
+}
+
+.label {
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  padding-left: 7px;
+  padding-right: 7px;
+  background-color: #fff;
+  text-align: center;
+}
+
+#cf {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  top: 10px;
+  left: 10px;
+}
+#cc {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 10px;
+  left: 160px;
+}
+#cb {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 10px;
+  left: 315px;
+}
+#cmf {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 100px;
+  left: 50px;
+}
+#omf {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 190px;
+  left: 95px;
+}
+#of {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 280px;
+  left: 130px;
+}
+#cf span{
+  position: relative;
+}
+.sep {
+  font-size: 5px;
+  vertical-align: middle;
+}
+canvas {
+  border: 1px solid black;
+}
