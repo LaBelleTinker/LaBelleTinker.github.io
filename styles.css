@@ -11,17 +11,20 @@
 
 .vowel {
   font-size: 20px;
-  }
-  
- .outer_container{
-   position: relative;
-   margin: 20px;
- }
+  font-family: "Times New Roman"
+}
+
+.outer_container {
+  position: relative;
+  margin: 20px;
+}
 
 .inner_container {
   position: relative;
 }
-.inner_container canvas, #overlay {
+
+.inner_container canvas,
+#overlay {
   position: absolute;
 }
 
@@ -42,6 +45,7 @@
   top: 10px;
   left: 10px;
 }
+
 #cc {
   position: absolute;
   width: 40px;
@@ -49,6 +53,7 @@
   top: 10px;
   left: 160px;
 }
+
 #cb {
   position: absolute;
   width: 40px;
@@ -56,6 +61,7 @@
   top: 10px;
   left: 315px;
 }
+
 #cmf {
   position: absolute;
   width: 40px;
@@ -63,6 +69,7 @@
   top: 100px;
   left: 50px;
 }
+
 #omf {
   position: absolute;
   width: 40px;
@@ -70,6 +77,7 @@
   top: 190px;
   left: 95px;
 }
+
 #of {
   position: absolute;
   width: 40px;
@@ -77,13 +85,16 @@
   top: 280px;
   left: 130px;
 }
-#cf span{
+
+#cf span {
   position: relative;
 }
+
 .sep {
   font-size: 5px;
   vertical-align: middle;
 }
+
 canvas {
   border: 1px solid black;
 }
