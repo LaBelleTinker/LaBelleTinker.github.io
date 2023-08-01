@@ -1,41 +1,87 @@
 .selected {
-  color: blue !important;
+  --glow-color: #45a5ff;
+  color: #2269ab;
+  text-shadow:
+    0 0 7px var(--glow-color),
+    0 0 10px var(--glow-color),
+    0 0 21px var(--glow-color),
+    0 0 42px var(--glow-color),
+    0 0 82px var(--glow-color),
+    0 0 92px var(--glow-color),
+    0 0 102px var(--glow-color),
+    0 0 151px var(--glow-color);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+.vowel {
+  font-size: 20px;
+  font-family: Serif;
 }
 
 .vowel:hover {
-  color: red;
+  color: var(--glow-color);
   cursor: pointer;
   outline-style: none;
   user-select: none;
+  --glow-color: #45a5ff;
+  text-shadow:
+    0 0 7px var(--glow-color),
+    0 0 10px var(--glow-color),
+    0 0 21px var(--glow-color),
+    0 0 42px var(--glow-color),
+    0 0 82px var(--glow-color),
+    0 0 92px var(--glow-color),
+    0 0 102px var(--glow-color),
+    0 0 151px var(--glow-color);
 }
 
-.vowel {
-  font-size: 20px;
-  font-family: TimesNewRoman
+#selection {
+  border: none;
 }
 
 .outer_container {
   position: relative;
   margin: 20px;
+  width: fit-content;
+  border: 1px solid black;
+  display: flex;
+  min-width: 200px;
+  min-height: 20px;
 }
 
+#vowels .inner_container {
+  width: 500px;
+  height: 310px;
+}
 .inner_container {
   position: relative;
+  width: fit-content;
+  display: none;
 }
 
-.inner_container canvas,
+.inner_container
 #overlay {
   position: absolute;
 }
 
 .label {
   position: absolute;
+  user-select: none;
   top: -10px;
   left: 15px;
   padding-left: 7px;
   padding-right: 7px;
   background-color: #fff;
   text-align: center;
+  cursor: pointer;
+}
+
+#vowels {
+  width: 500;
+  height: 310;
 }
 
 #cf {
@@ -62,12 +108,68 @@
   left: 315px;
 }
 
+#ncnf {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 55px;
+  left: 85px;
+}
+
+#ncnb {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 55px;
+  left: 275px;
+}
+
 #cmf {
   position: absolute;
   width: 40px;
   height: 30px;
   top: 100px;
   left: 50px;
+}
+
+#cmc {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 100px;
+  left: 180px;
+}
+
+#cmb {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 100px;
+  left: 315px;
+}
+
+#mf {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 145px;
+  left: 72px;
+}
+
+#mc {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 145px;
+  left: 210px;
+}
+
+#mb {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 145px;
+  left: 315px;
 }
 
 #omf {
@@ -78,6 +180,38 @@
   left: 95px;
 }
 
+#omc {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 190px;
+  left: 200px;
+}
+
+#omb {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 190px;
+  left: 315px;
+}
+
+#nof {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 235px;
+  left: 110px;
+}
+
+#noc {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 235px;
+  left: 235px;
+}
+
 #of {
   position: absolute;
   width: 40px;
@@ -86,8 +220,20 @@
   left: 130px;
 }
 
-#cf span {
-  position: relative;
+#oc {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 280px;
+  left: 222px;
+}
+
+#ob {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 280px;
+  left: 315px;
 }
 
 .sep {
@@ -96,5 +242,49 @@
 }
 
 canvas {
-  border: 1px solid black;
+  position: absolute;
+}
+
+#consonants .inner_container {
+  padding: 10px;
+  padding-top: 15px;
+}
+
+table {
+  padding: 10px;
+  padding-top: 60px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+td {
+  border: 1px solid #ddd;
+  }
+
+.consonant:hover{
+  color: var(--glow-color);
+  cursor: pointer;
+  outline-style: none;
+  user-select: none;
+  --glow-color: #45a5ff;
+  text-shadow:
+    0 0 7px var(--glow-color),
+    0 0 10px var(--glow-color),
+    0 0 21px var(--glow-color),
+    0 0 42px var(--glow-color),
+    0 0 82px var(--glow-color),
+    0 0 92px var(--glow-color),
+    0 0 102px var(--glow-color),
+    0 0 151px var(--glow-color);
+  
+}
+
+th {
+  background-color: #333;
+  color: white;
+  border: 1px solid #777;
 }
