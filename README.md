@@ -20,7 +20,6 @@
   <div class=outer_container id=vowels>
     <div class=inner_container>
       <canvas id="canvas" height="310" width="500"></canvas>
-
       <div id=overlay>
         <div id="cf">
           <span class="vowel" id="cfu" oncontextmenu="return false;">i</span>
@@ -110,7 +109,6 @@
           <span class="vowel" id="obr" oncontextmenu="return false;" text-align="right">ɒ</span>
         </div>
       </div>
-
     </div>
     <div class=label>
       <span>Vowels</span>
