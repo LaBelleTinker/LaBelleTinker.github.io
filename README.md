@@ -1,13 +1,3 @@
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="styles.css" /> 
-    <script type="text/javascript" defer src="script.js"></script>
-    <title>Phoneme Inventory Maker</title>
-</head>
-
-<body>
   <div class=outer_container id=selection>
     <label for="dialect">Select inventory</label>
     <select name="dialect" id=dialect_selector>
@@ -502,7 +492,6 @@
       <span>Pulmonic Consonants</span>
     </div>
   </div>
-</body>
 
 <div id="audio">
 
