@@ -15,7 +15,9 @@
 body {
   display: flex;
   flex-direction: column;
+  font-family: serif;
 }
+
 .vowel {
   font-size: 20px;
   font-family: Serif;
@@ -50,20 +52,25 @@ body {
   display: flex;
   min-width: 200px;
   min-height: 20px;
+  max-width: 75%;
 }
 
 #vowels .inner_container {
   width: 500px;
   height: 310px;
 }
+
 .inner_container {
   position: relative;
   width: fit-content;
   display: none;
+  overflow-x: scroll;
+}
+#consonants .inner_container div {
+  overflow-x: scroll;
 }
 
-.inner_container
-#overlay {
+.inner_container #overlay {
   position: absolute;
 }
 
@@ -254,18 +261,20 @@ table {
   padding: 10px;
   padding-top: 60px;
   border-collapse: collapse;
+  width: 100%;
 }
 
-th, td {
+th,
+td {
   padding: 10px;
   text-align: center;
 }
 
 td {
   border: 1px solid #ddd;
-  }
+}
 
-.consonant:hover{
+.consonant:hover {
   color: var(--glow-color);
   cursor: pointer;
   outline-style: none;
@@ -280,7 +289,7 @@ td {
     0 0 92px var(--glow-color),
     0 0 102px var(--glow-color),
     0 0 151px var(--glow-color);
-  
+
 }
 
 th {
