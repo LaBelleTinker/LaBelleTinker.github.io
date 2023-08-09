@@ -1,535 +1,670 @@
-  <div class=outer_container id=selection>
-    <label for="dialect">Select inventory</label>
-    <select name="dialect" id=dialect_selector>
-      <option value=null></option>
-      <option value=empty>Clear</option>
-      <option value=GAE>General American English</option>
+
+
+  <div class="outer_container" id="selection">
+    <label for="dialect">Select inventory:</label>
+    <select name="dialect" id="dialect_selector">
+      <option value="null"></option>
+      <option value="empty">Clear</option>
+      <option value="GAE">General American English</option>
     </select>
   </div>
 
-  <div class=outer_container id=vowels>
-    <div class=inner_container>
+  <div class="outer_container" id="vowels">
+    <div class="inner_container">
       <canvas id="canvas" height="310" width="500"></canvas>
-      <div id=overlay>
+      <div id="overlay">
         <div id="cf">
-          <span class="vowel" id="cfu" oncontextmenu="return false;">i</span>
+          <span class="phoneme vowel" id="cfu">i</span>
           <span class="sep">⬤</span>
-          <span class="vowel" id="cfr" oncontextmenu="return false;" text-align="right">y</span>
+          <span class="phoneme vowel" id="cfr" text-align="right">y</span>
         </div>
         <div id="cc">
-          <span class="vowel" id="ccu" oncontextmenu="return false;">ɨ</span>
+          <span class="phoneme vowel" id="ccu">ɨ</span>
           <span class="sep">⬤</span>
-          <span class="vowel" id="ccr" oncontextmenu="return false;" text-align="right">ʉ</span>
+          <span class="phoneme vowel" id="ccr" text-align="right">ʉ</span>
         </div>
         <div id="cb">
-          <span class="vowel" id="cbu" oncontextmenu="return false;">ɯ</span>
+          <span class="phoneme vowel" id="cbu">ɯ</span>
           <span class="sep">⬤</span>
-          <span class="vowel" id="cbr" oncontextmenu="return false;" text-align="right">u</span>
+          <span class="phoneme vowel" id="cbr">u</span>
         </div>
         <div id="ncnf">
-          <span class="vowel" id="ncnfu" oncontextmenu="return false;">ɪ</span>
+          <span class="phoneme vowel" id="ncnfu">ɪ</span>
           <span class="sep">⬤</span>
-          <span class="vowel" id="ncnfr" oncontextmenu="return false;" text-align="right">ʏ</span>
+          <span class="phoneme vowel" id="ncnfr" text-align="right">ʏ</span>
         </div>
         <div id="ncnb">
-          <span class="vowel" id="ncnbr" oncontextmenu="return false;" text-align="right">ʊ</span>
+          <span class="phoneme vowel" id="ncnbr" text-align="right">ʊ</span>
         </div>
         <div id="cmf">
-          <span class="vowel" id="cmfu" oncontextmenu="return false;">e</span>
+          <span class="phoneme vowel" id="cmfu">e</span>
           <span class="sep">⬤</span>
-          <span class="vowel" id="cmfr" oncontextmenu="return false;" text-align="right">ø</span>
+          <span class="phoneme vowel" id="cmfr" text-align="right">ø</span>
         </div>
         <div id="cmc">
-          <span class="vowel" id="cmcu" oncontextmenu="return false;">ɘ</span>
+          <span class="phoneme vowel" id="cmcu">ɘ</span>
           <span class="sep">⬤</span>
-          <span class="vowel" id="cmcr" oncontextmenu="return false;" text-align="right">ɵ</span>
+          <span class="phoneme vowel" id="cmcr" text-align="right">ɵ</span>
         </div>
         <div id="cmb">
-          <span class="vowel" id="cmbu" oncontextmenu="return false;">ɤ</span>
+          <span class="phoneme vowel" id="cmbu">ɤ</span>
           <span class="sep">⬤</span>
-          <span class="vowel" id="cmbr" oncontextmenu="return false;" text-align="right">o</span>
+          <span class="phoneme vowel" id="cmbr" text-align="right">o</span>
         </div>
         <div id="mf">
-          <span class="vowel" id="mfu" oncontextmenu="return false;">e̞</span>
+          <span class="phoneme vowel" id="mfu">e̞</span>
           <span class="sep">⬤</span>
-          <span class="vowel" id="mfr" oncontextmenu="return false;" text-align="right">ø̞</span>
+          <span class="phoneme vowel" id="mfr" text-align="right">ø̞</span>
         </div>
         <div id="mc">
-          <span class="vowel" id="mcv" oncontextmenu="return false;">ə</span>
+          <span class="phoneme vowel" id="mcv">ə</span>
         </div>
         <div id="mb">
-          <span class="vowel" id="mbu" oncontextmenu="return false;">ɤ̞</span>
+          <span class="phoneme vowel" id="mbu">ɤ̞</span>
           <span class="sep">⬤</span>
-          <span class="vowel" id="mbr" oncontextmenu="return false;" text-align="right">o̞</span>
+          <span class="phoneme vowel" id="mbr" text-align="right">o̞</span>
         </div>
         <div id="omf">
-          <span class="vowel" id="omfu" oncontextmenu="return false;">ɛ</span>
+          <span class="phoneme vowel" id="omfu">ɛ</span>
           <span class="sep">⬤</span>
-          <span class="vowel" id="omfr" oncontextmenu="return false;" text-align="right">œ</span>
+          <span class="phoneme vowel" id="omfr" text-align="right">œ</span>
         </div>
         <div id="omc">
-          <span class="vowel" id="omcu" oncontextmenu="return false;">ɜ</span>
+          <span class="phoneme vowel" id="omcu">ɜ</span>
           <span class="sep">⬤</span>
-          <span class="vowel" id="omcr" oncontextmenu="return false;" text-align="right">ɞ</span>
+          <span class="phoneme vowel" id="omcr" text-align="right">ɞ</span>
         </div>
         <div id="omb">
-          <span class="vowel" id="ombu" oncontextmenu="return false;">ʌ</span>
+          <span class="phoneme vowel" id="ombu">ʌ</span>
           <span class="sep">⬤</span>
-          <span class="vowel" id="ombr" oncontextmenu="return false;" text-align="right">ɔ</span>
+          <span class="phoneme vowel" id="ombr" text-align="right">ɔ</span>
         </div>
         <div id="nof">
-          <span class="vowel" id="nofv" oncontextmenu="return false;">æ</span>
+          <span class="phoneme vowel" id="nofv">æ</span>
         </div>
         <div id="noc">
-          <span class="vowel" id="nocv" oncontextmenu="return false;">ɐ</span>
+          <span class="phoneme vowel" id="nocv">ɐ</span>
         </div>
         <div id="of">
-          <span class="vowel" id="ofu" oncontextmenu="return false;">a</span>
+          <span class="phoneme vowel" id="ofu">a</span>
           <span class="sep">⬤</span>
-          <span class="vowel" id="ofr" oncontextmenu="return false;" text-align="right">ɶ</span>
+          <span class="phoneme vowel" id="ofr" text-align="right">ɶ</span>
         </div>
         <div id="oc">
-          <span class="vowel" id="ocu" oncontextmenu="return false;">ä</span>
+          <span class="phoneme vowel" id="ocu">ä</span>
           <span class="sep">⬤</span>
-          <span class="vowel" id="ocr" oncontextmenu="return false;" text-align="right">ɶ̈</span>
+          <span class="phoneme vowel" id="ocr" text-align="right">ɶ̈</span>
         </div>
         <div id="ob">
-          <span class="vowel" id="obu" oncontextmenu="return false;">ɑ</span>
+          <span class="phoneme vowel" id="obu">ɑ</span>
           <span class="sep">⬤</span>
-          <span class="vowel" id="obr" oncontextmenu="return false;" text-align="right">ɒ</span>
+          <span class="phoneme vowel" id="obr" text-align="right">ɒ</span>
         </div>
       </div>
     </div>
-    <div class=label>
+    <div class="label">
       <span>Vowels</span>
     </div>
   </div>
 
-  <div class=outer_container id=consonants>
-    <div class=inner_container>
-      <table>
-        <tbody>
-          <tr>
-            <th rowspan="2"></th>
-            <th colspan="5">Labial</th>
-            <th colspan="10">Coronal</th>
-            <th colspan="5">Dorsal</th>
-            <th colspan="4">Laryngeal</th>
-          </tr>
-          <tr>
-            <th colspan="2">Bilabial</th>
-            <th colspan="2">Labio-dental</th>
-            <th colspan="2">Linguo-labial</th>
-            <th colspan="2">Dental</th>
-            <th colspan="2">Alveolar</th>
-            <th colspan="2">Post-alveolar</th>
-            <th colspan="2">Retroflex</th>
-            <th colspan="2">Palatal</th>
-            <th colspan="2">Velar</th>
-            <th colspan="2">Uvular</th>
-            <th colspan="2">Pharyngeal/epiglottal</th>
-            <th colspan="2">Glottal</th>
-          </tr>
-          <tr>
-            <th>Nasal</th>
-            <td><span class="consonant" id="-bn">m̥</span></td>
-            <td><span class="consonant" id="bn">m</span></td>
-            <td></td>
-            <td><span class="consonant" id="ldn">ɱ</span></td>
-            <td></td>
-            <td><span class="consonant" id="lln">n̼</span></td>
-            <td></td>
-            <td></td>
-            <td><span class="consonant" id="-an">n̥</span></td>
-            <td><span class="consonant" id="an">n</span></td>
-            <td></td>
-            <td></td>
-            <td><span class="consonant" id="-rn">ɳ̊</span></td>
-            <td><span class="consonant" id="rn">ɳ</span></td>
-            <td><span class="consonant" id="-pn">ɲ̊</span></td>
-            <td><span class="consonant" id="pn">ɲ</span></td>
-            <td><span class="consonant" id="-vn">ŋ̊</span></td>
-            <td><span class="consonant" id="vn">ŋ</span></td>
-            <td></td>
-            <td><span class="consonant" id="un">ɴ</span></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th>Plosive</th>
-            <td><span class="consonant" id="-bp">p</span></td>
-            <td><span class="consonant" id="bp">b</span></td>
-            <td><span class="consonant" id="-ldp">p̪</span></td>
-            <td><span class="consonant" id="ldp">b̪</span></td>
-            <td><span class="consonant" id="-llp">t̼</span></td>
-            <td><span class="consonant" id="llp">d̼</span></td>
-            <td><span class="consonant" id="-dp">t̪</span></td>
-            <td><span class="consonant" id="dp">d̪</span></td>
-            <td><span class="consonant" id="-ap">t</span></td>
-            <td><span class="consonant" id="ap">d</span></td>
-            <td></td>
-            <td></td>
-            <td><span class="consonant" id="-rp">ʈ</span></td>
-            <td><span class="consonant" id="rp">ɖ</span></td>
-            <td><span class="consonant" id="-pp">c</span></td>
-            <td><span class="consonant" id="pp">ɟ</span></td>
-            <td><span class="consonant" id="-vp">k</span></td>
-            <td><span class="consonant" id="vp">ɡ</span></td>
-            <td><span class="consonant" id="-up">q</span></td>
-            <td><span class="consonant" id="up">ɢ</span></td>
-            <td><span class="consonant" id="-php">ʡ</span></td>
-            <td></td>
-            <td><span class="consonant" id="-gp">ʔ</span></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th>Sibilant affricate</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>t̪s̪</td>
-            <td>d̪z̪</td>
-            <td>ts</td>
-            <td>dz</td>
-            <td>t̠ʃ</td>
-            <td>d̠ʒ</td>
-            <td>tʂ</td>
-            <td>dʐ</td>
-            <td>tɕ</td>
-            <td>dʑ</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th> Non-sibilant affricate
-            </th>
-            <td>pɸ</td>
-            <td>bβ</td>
-            <td>p̪f</td>
-            <td>b̪v</td>
-            <td></td>
-            <td></td>
-            <td>t̪θ</td>
-            <td>d̪ð</td>
-            <td>tɹ̝̊</td>
-            <td>dɹ̝</td>
-            <td>t̠ɹ̠̊˔</td>
-            <td>d̠ɹ̠˔</td>
-            <td></td>
-            <td></td>
-            <td>cç</td>
-            <td>ɟʝ</td>
-            <td>kx</td>
-            <td>ɡɣ</td>
-            <td>qχ</td>
-            <td>ɢʁ</td>
-            <td>ʡʜ</td>
-            <td>ʡʢ</td>
-            <td>ʔh</td>
-            <td></td>
-          </tr>
-          <tr>
-            <th>Sibilant fricative</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>s</td>
-            <td>z</td>
-            <td>ʃ</td>
-            <td>ʒ</td>
-            <td>ʂ</td>
-            <td>ʐ</td>
-            <td>ɕ</td>
-            <td>ʑ</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th>Non-sibilant fricative
-            </th>
-            <td>ɸ</td>
-            <td dir="ltr">β</td>
-            <td>f</td>
-            <td>v</td>
-            <td>θ̼</td>
-            <td>ð̼</td>
-            <td>θ</td>
-            <td>ð</td>
-            <td>θ̠</td>
-            <td>ð̠</td>
-            <td>ɹ̠̊˔</td>
-            <td>ɹ̠˔</td>
-            <td>ɻ̊˔</td>
-            <td>ɻ˔</td>
-            <td>ç</td>
-            <td>ʝ</td>
-            <td>x</td>
-            <td>ɣ</td>
-            <td>χ</td>
-            <td>ʁ</td>
-            <td>ħ</td>
-            <td>ʕ</td>
-            <td>h</td>
-            <td>ɦ</td>
-          </tr>
-          <tr>
-            <th>Approximant</th>
-            <td></td>
-            <td>β̞</td>
-            <td></td>
-            <td>ʋ</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>ð̞</td>
-            <td></td>
-            <td>ɹ</td>
-            <td></td>
-            <td>ɹ̠</td>
-            <td></td>
-            <td>ɻ</td>
-            <td></td>
-            <td>j</td>
-            <td></td>
-            <td>ɰ</td>
-            <td></td>
-            <td>ʁ̞</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>ʔ̞</td>
-          </tr>
-          <tr>
-            <th>Tap/flap</th>
-            <td></td>
-            <td>ⱱ̟</td>
-            <td></td>
-            <td>ⱱ</td>
-            <td></td>
-            <td>ɾ̼</td>
-            <td></td>
-            <td></td>
-            <td>ɾ̥</td>
-            <td>ɾ</td>
-            <td></td>
-            <td></td>
-            <td>ɽ̊</td>
-            <td>ɽ</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>ɢ̆</td>
-            <td></td>
-            <td>ʡ̆</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th>Trill</th>
-            <td>ʙ̥</td>
-            <td>ʙ</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>r̥</td>
-            <td>r</td>
-            <td></td>
-            <td>r̠</td>
-            <td>ɽ̊r̥</td>
-            <td>ɽr</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>ʀ̥</td>
-            <td>ʀ</td>
-            <td>ʜ</td>
-            <td>ʢ</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th>Lateral affricate</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>tɬ</td>
-            <td>dɮ</td>
-            <td></td>
-            <td></td>
-            <td>tꞎ</td>
-            <td>d𝼅</td>
-            <td>c𝼆</td>
-            <td>ɟʎ̝</td>
-            <td>k𝼄</td>
-            <td>ɡʟ̝</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th>Lateral fricative</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>ɬ</td>
-            <td>ɮ</td>
-            <td></td>
-            <td></td>
-            <td>ꞎ</td>
-            <td>𝼅</td>
-            <td>𝼆</td>
-            <td>ʎ̝</td>
-            <td>𝼄</td>
-            <td>ʟ̝</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th class="s1">
-             Lateral approximant
-            </th>
-            <td class="s2"></td>
-            <td class="s2"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>l̪</td>
-            <td></td>
-            <td>l</td>
-            <td></td>
-            <td>l̠</td>
-            <td></td>
-            <td>ɭ</td>
-            <td></td>
-            <td>ʎ</td>
-            <td></td>
-            <td>ʟ</td>
-            <td></td>
-            <td>ʟ̠</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th>Lateral tap/flap</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>ɺ̥</td>
-            <td>ɺ</td>
-            <td></td>
-            <td></td>
-            <td>𝼈̥</td>
-            <td>𝼈</td>
-            <td></td>
-            <td>ʎ̆</td>
-            <td></td>
-            <td>ʟ̆</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
+  <div class="outer_container" id="consonants">
+    <div class="inner_container">
+      <div>
+
+        <table>
+          <tbody>
+            <tr>
+              <th rowspan="2"></th>
+              <th colspan="5">Labial</th>
+              <th colspan="10">Coronal</th>
+              <th colspan="5">Dorsal</th>
+              <th colspan="4">Laryngeal</th>
+            </tr>
+            <tr>
+              <th colspan="2">Bilabial</th>
+              <th colspan="2">Labio-dental</th>
+              <th colspan="2">Linguo-labial</th>
+              <th colspan="2">Dental</th>
+              <th colspan="2">Alveolar</th>
+              <th colspan="2">Post-alveolar</th>
+              <th colspan="2">Retroflex</th>
+              <th colspan="2">Palatal</th>
+              <th colspan="2">Velar</th>
+              <th colspan="2">Uvular</th>
+              <th colspan="2">Pharyngeal/<br>epiglottal</th>
+              <th colspan="2">Glottal</th>
+            </tr>
+            <tr>
+              <th>Nasal</th>
+              <td><span class="phoneme consonant norecording" id="-bn">m̥</span></td>
+              <td><span class="phoneme consonant" id="bn">m</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="ldn">ɱ</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="lln">n̼</span></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="-an">n̥</span></td>
+              <td><span class="phoneme consonant" id="an">n</span></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="-rn">ɳ̊</span></td>
+              <td><span class="phoneme consonant" id="rn">ɳ</span></td>
+              <td><span class="phoneme consonant" id="-pn">ɲ̊</span></td>
+              <td><span class="phoneme consonant" id="pn">ɲ</span></td>
+              <td><span class="phoneme consonant" id="-vn">ŋ̊</span></td>
+              <td><span class="phoneme consonant" id="vn">ŋ</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="un">ɴ</span></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Plosive</th>
+              <td><span class="phoneme consonant" id="-bp">p</span></td>
+              <td><span class="phoneme consonant" id="bp">b</span></td>
+              <td><span class="phoneme consonant" id="-ldp">p̪</span></td>
+              <td><span class="phoneme consonant" id="ldp">b̪</span></td>
+              <td><span class="phoneme consonant" id="-llp">t̼</span></td>
+              <td><span class="phoneme consonant" id="llp">d̼</span></td>
+              <td><span class="phoneme consonant" id="-dp">t̪</span></td>
+              <td><span class="phoneme consonant" id="dp">d̪</span></td>
+              <td><span class="phoneme consonant" id="-ap">t</span></td>
+              <td><span class="phoneme consonant" id="ap">d</span></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="-rp">ʈ</span></td>
+              <td><span class="phoneme consonant" id="rp">ɖ</span></td>
+              <td><span class="phoneme consonant" id="-pp">c</span></td>
+              <td><span class="phoneme consonant" id="pp">ɟ</span></td>
+              <td><span class="phoneme consonant" id="-vp">k</span></td>
+              <td><span class="phoneme consonant" id="vp">ɡ</span></td>
+              <td><span class="phoneme consonant" id="-up">q</span></td>
+              <td><span class="phoneme consonant" id="up">ɢ</span></td>
+              <td><span class="phoneme consonant" id="-php">ʡ</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="-gp">ʔ</span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Sibilant affricate</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="-dsa">t̪s̪</span></td>
+              <td><span class="phoneme consonant" id="dsa">d̪z̪</span></td>
+              <td><span class="phoneme consonant" id="-asa">ts</span></td>
+              <td><span class="phoneme consonant" id="asa">dz</span></td>
+              <td><span class="phoneme consonant" id="-pasa">t̠ʃ</span></td>
+              <td><span class="phoneme consonant" id="pasa">d̠ʒ</span></td>
+              <td><span class="phoneme consonant" id="-rsa">tʂ</span></td>
+              <td><span class="phoneme consonant" id="rsa">dʐ</span></td>
+              <td><span class="phoneme consonant" id="-psa">tɕ</span></td>
+              <td><span class="phoneme consonant" id="psa">dʑ</span></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th> Non-sibilant affricate
+              </th>
+              <td><span class="phoneme consonant" id="-bnsa">pɸ</span></td>
+              <td><span class="phoneme consonant" id="bnsa">bβ</span></td>
+              <td><span class="phoneme consonant" id="-ldnsa">p̪f</span></td>
+              <td><span class="phoneme consonant" id="ldnsa">b̪v</span></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="-dnsa">t̪θ</span></td>
+              <td><span class="phoneme consonant" id="dnsa">d̪ð</span></td>
+              <td><span class="phoneme consonant" id="-ansa">tɹ̝̊</span></td>
+              <td><span class="phoneme consonant" id="ansa">dɹ̝</span></td>
+              <td><span class="phoneme consonant" id="-pansa">t̠ɹ̠̊˔</span></td>
+              <td><span class="phoneme consonant" id="pansa">d̠ɹ̠˔</span></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="-pnsa">cç</span></td>
+              <td><span class="phoneme consonant" id="pnsa">ɟʝ</span></td>
+              <td><span class="phoneme consonant" id="-vnsa">kx</span></td>
+              <td><span class="phoneme consonant" id="vnsa">ɡɣ</span></td>
+              <td><span class="phoneme consonant" id="-unsa">qχ</span></td>
+              <td><span class="phoneme consonant" id="unsa">ɢʁ</span></td>
+              <td><span class="phoneme consonant" id="-phnsa">ʡʜ</span></td>
+              <td><span class="phoneme consonant" id="phnsa">ʡʢ</span></td>
+              <td><span class="phoneme consonant" id="-gnsa">ʔh</span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Sibilant fricative</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="-asf">s</span></td>
+              <td><span class="phoneme consonant" id="asf">z</span></td>
+              <td><span class="phoneme consonant" id="-pasf">ʃ</span></td>
+              <td><span class="phoneme consonant" id="pasf">ʒ</span></td>
+              <td><span class="phoneme consonant" id="-rsf">ʂ</span></td>
+              <td><span class="phoneme consonant" id="rsf">ʐ</span></td>
+              <td><span class="phoneme consonant" id="-psf">ɕ</span></td>
+              <td><span class="phoneme consonant" id="psf">ʑ</span></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Non-sibilant fricative
+              </th>
+              <td><span class="phoneme consonant" id="-bnsf">ɸ</span></td>
+              <td><span class="phoneme consonant" id="bnsf">β</span></td>
+              <td><span class="phoneme consonant" id="-ldnsf">f</span></td>
+              <td><span class="phoneme consonant" id="ldnsf">v</span></td>
+              <td><span class="phoneme consonant" id="-llnsf">θ̼</span></td>
+              <td><span class="phoneme consonant" id="llnsf">ð̼</span></td>
+              <td><span class="phoneme consonant" id="-dnsf">θ</span></td>
+              <td><span class="phoneme consonant" id="dnsf">ð</span></td>
+              <td><span class="phoneme consonant" id="-ansf">θ̠</span></td>
+              <td><span class="phoneme consonant" id="ansf">ð̠</span></td>
+              <td><span class="phoneme consonant" id="-pansf">ɹ̠̊˔</span></td>
+              <td><span class="phoneme consonant" id="pansf">ɹ̠˔</span></td>
+              <td><span class="phoneme consonant" id="-rnsf">ɻ̊˔</span></td>
+              <td><span class="phoneme consonant" id="rnsf">ɻ˔</span></td>
+              <td><span class="phoneme consonant" id="-pnsf">ç</span></td>
+              <td><span class="phoneme consonant" id="pnsf">ʝ</span></td>
+              <td><span class="phoneme consonant" id="-vnsf">x</span></td>
+              <td><span class="phoneme consonant" id="vnsf">ɣ</span></td>
+              <td><span class="phoneme consonant" id="-unsf">χ</span></td>
+              <td><span class="phoneme consonant" id="unsf">ʁ</span></td>
+              <td><span class="phoneme consonant" id="-phnsf">ħ</span></td>
+              <td><span class="phoneme consonant" id="phnsf">ʕ</span></td>
+              <td><span class="phoneme consonant" id="-gnsf">h</span></td>
+              <td><span class="phoneme consonant" id="gnsf">ɦ</span></td>
+            </tr>
+            <tr>
+              <th>Approximant</th>
+              <td></td>
+              <td><span class="phoneme consonant" id="ba">β̞</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="lda">ʋ</span></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="da">ð̞</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="aa">ɹ</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="paa">ɹ̠</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="ra">ɻ</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="pa">j</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="va">ɰ</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="ua">ʁ̞</span></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="ga">ʔ̞</span></td>
+            </tr>
+            <tr>
+              <th>Tap/flap</th>
+              <td></td>
+              <td><span class="phoneme consonant" id="btf">ⱱ̟</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="ldtf">ⱱ</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="lltf">ɾ̼</span></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="-atf">ɾ̥</span></td>
+              <td><span class="phoneme consonant" id="atf">ɾ</span></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="-rtf">ɽ̊</span></td>
+              <td><span class="phoneme consonant" id="rtf">ɽ</span></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="utf">ɢ̆</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="phtf">ʡ̆</span></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Trill</th>
+              <td><span class="phoneme consonant" id="-bt">ʙ̥</span></td>
+              <td><span class="phoneme consonant" id="bt">ʙ</span></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="-at">r̥</span></td>
+              <td><span class="phoneme consonant" id="at">r</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="pat">r̠</span></td>
+              <td><span class="phoneme consonant" id="-rt">ɽ̊r̥</span></td>
+              <td><span class="phoneme consonant" id="rt">ɽr</span></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="-ut">ʀ̥</span></td>
+              <td><span class="phoneme consonant" id="ut">ʀ</span></td>
+              <td><span class="phoneme consonant" id="-pht">ʜ</span></td>
+              <td><span class="phoneme consonant" id="pht">ʢ</span></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Lateral affricate</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="-ala">tɬ</span></td>
+              <td><span class="phoneme consonant" id="ala">dɮ</span></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="-rla">tꞎ</span></td>
+              <td><span class="phoneme consonant" id="rla">d𝼅</span></td>
+              <td><span class="phoneme consonant" id="-pla">c𝼆</span></td>
+              <td><span class="phoneme consonant" id="pla">ɟʎ̝</span></td>
+              <td><span class="phoneme consonant" id="-vla">k𝼄</span></td>
+              <td><span class="phoneme consonant" id="vla">ɡʟ̝</span></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Lateral fricative</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="-alf">ɬ</span></td>
+              <td><span class="phoneme consonant" id="alf">ɮ</span></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="-rlf">ꞎ</span></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="pla">ʎ̝</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="vla">ʟ̝</span></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>
+                Lateral approximant
+              </th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="dlap">l̪</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="alap">l</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="palap">l̠</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="rlap">ɭ</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="plap">ʎ</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="vlap">ʟ</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="ulap">ʟ̠</span></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div class=label>
-      <span>Pulmonic Consonants</span>
+    <div class="label">
+      <span>Consonants</span>
     </div>
   </div>
 
-<div id="audio">
+  <div id="audio">
 
-  <audio id="cfu_audio" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Close_front_unrounded_vowel.ogg"></audio>
-  <audio id="cfr_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Close_front_rounded_vowel.ogg"></audio>
-  <audio id="ccu_audio" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Close_central_unrounded_vowel.ogg"></audio>
-  <audio id="ccr_audio" src="https://upload.wikimedia.org/wikipedia/commons/6/66/Close_central_rounded_vowel.ogg"></audio>
-  <audio id="cbu_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Close_back_unrounded_vowel.ogg"></audio>
-  <audio id="cbr_audio" src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Close_back_rounded_vowel.ogg"></audio>
-  <audio id="ncnfu_audio" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Near-close_near-front_unrounded_vowel.ogg"></audio>
-  <audio id="ncnfr_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Near-close_near-front_rounded_vowel.ogg"></audio>
-  <audio id="ncnbr_audio" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Near-close_near-back_rounded_vowel.ogg"></audio>
-  <audio id="cmfu_audio" src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Close-mid_front_unrounded_vowel.ogg"></audio>
-  <audio id="cmfr_audio" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Close-mid_front_rounded_vowel.ogg"></audio>
-  <audio id="cmcu_audio" src="https://upload.wikimedia.org/wikipedia/commons/6/60/Close-mid_central_unrounded_vowel.ogg"></audio>
-  <audio id="cmcr_audio" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Close-mid_central_rounded_vowel.ogg"></audio>
-  <audio id="cmbu_audio" src="https://upload.wikimedia.org/wikipedia/commons/2/26/Close-mid_back_unrounded_vowel.ogg"></audio>
-  <audio id="cmbr_audio" src="https://upload.wikimedia.org/wikipedia/commons/8/84/Close-mid_back_rounded_vowel.ogg"></audio>
-  <audio id="mfu_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Mid_front_unrounded_vowel.ogg"></audio>
-  <audio id="mfr_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Mid_front_rounded_vowel.ogg"></audio>
-  <audio id="mcv_audio" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Mid-central_vowel.ogg"></audio>
-  <audio id="mbu_audio" src="https://upload.wikimedia.org/wikipedia/commons/d/d8/%C9%A4%CC%9E_IPA_sound.opus"></audio>
-  <audio id="mbr_audio" src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Mid_back_rounded_vowel.ogg"></audio>
-  <audio id="omfu_audio" src="https://upload.wikimedia.org/wikipedia/commons/7/71/Open-mid_front_unrounded_vowel.ogg"></audio>
-  <audio id="omfr_audio" src="https://upload.wikimedia.org/wikipedia/commons/0/00/Open-mid_front_rounded_vowel.ogg"></audio>
-  <audio id="omcu_audio" src="https://upload.wikimedia.org/wikipedia/commons/0/01/Open-mid_central_unrounded_vowel.ogg"></audio>
-  <audio id="omcr_audio" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Open-mid_central_rounded_vowel.ogg"></audio>
-  <audio id="ombu_audio" src="https://upload.wikimedia.org/wikipedia/commons/8/80/PR-open-mid_back_unrounded_vowel2.ogg"></audio>
-  <audio id="ombr_audio" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/PR-open-mid_back_rounded_vowel.ogg"></audio>
-  <audio id="nofv_audio" src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Near-open_front_unrounded_vowel.ogg"></audio>
-  <audio id="nocv_audio" src="https://upload.wikimedia.org/wikipedia/commons/2/22/Near-open_central_unrounded_vowel.ogg"></audio>
-  <audio id="ofu_audio" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/PR-open_front_unrounded_vowel.ogg"></audio>
-  <audio id="ofr_audio" src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Open_front_rounded_vowel.ogg"></audio>
-  <audio id="ocu_audio" src="https://upload.wikimedia.org/wikipedia/commons/5/50/Open_central_unrounded_vowel.ogg"></audio>
-  <audio id="ocr_audio" src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Open_central_rounded_vowel.ogg"></audio>
-  <audio id="obu_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Open_back_unrounded_vowel.ogg"></audio>
-  <audio id="obr_audio" src="https://upload.wikimedia.org/wikipedia/commons/3/31/PR-open_back_rounded_vowel.ogg"></audio>
-</div>
+    <audio id="cfu_audio" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Close_front_unrounded_vowel.ogg"></audio>
+    <audio id="cfr_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Close_front_rounded_vowel.ogg"></audio>
+    <audio id="ccu_audio" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Close_central_unrounded_vowel.ogg"></audio>
+    <audio id="ccr_audio" src="https://upload.wikimedia.org/wikipedia/commons/6/66/Close_central_rounded_vowel.ogg"></audio>
+    <audio id="cbu_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Close_back_unrounded_vowel.ogg"></audio>
+    <audio id="cbr_audio" src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Close_back_rounded_vowel.ogg"></audio>
+    <audio id="ncnfu_audio" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Near-close_near-front_unrounded_vowel.ogg"></audio>
+    <audio id="ncnfr_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Near-close_near-front_rounded_vowel.ogg"></audio>
+    <audio id="ncnbr_audio" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Near-close_near-back_rounded_vowel.ogg"></audio>
+    <audio id="cmfu_audio" src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Close-mid_front_unrounded_vowel.ogg"></audio>
+    <audio id="cmfr_audio" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Close-mid_front_rounded_vowel.ogg"></audio>
+    <audio id="cmcu_audio" src="https://upload.wikimedia.org/wikipedia/commons/6/60/Close-mid_central_unrounded_vowel.ogg"></audio>
+    <audio id="cmcr_audio" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Close-mid_central_rounded_vowel.ogg"></audio>
+    <audio id="cmbu_audio" src="https://upload.wikimedia.org/wikipedia/commons/2/26/Close-mid_back_unrounded_vowel.ogg"></audio>
+    <audio id="cmbr_audio" src="https://upload.wikimedia.org/wikipedia/commons/8/84/Close-mid_back_rounded_vowel.ogg"></audio>
+    <audio id="mfu_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Mid_front_unrounded_vowel.ogg"></audio>
+    <audio id="mfr_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Mid_front_rounded_vowel.ogg"></audio>
+    <audio id="mcv_audio" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Mid-central_vowel.ogg"></audio>
+    <audio id="mbu_audio" src="https://upload.wikimedia.org/wikipedia/commons/d/d8/%C9%A4%CC%9E_IPA_sound.opus"></audio>
+    <audio id="mbr_audio" src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Mid_back_rounded_vowel.ogg"></audio>
+    <audio id="omfu_audio" src="https://upload.wikimedia.org/wikipedia/commons/7/71/Open-mid_front_unrounded_vowel.ogg"></audio>
+    <audio id="omfr_audio" src="https://upload.wikimedia.org/wikipedia/commons/0/00/Open-mid_front_rounded_vowel.ogg"></audio>
+    <audio id="omcu_audio" src="https://upload.wikimedia.org/wikipedia/commons/0/01/Open-mid_central_unrounded_vowel.ogg"></audio>
+    <audio id="omcr_audio" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Open-mid_central_rounded_vowel.ogg"></audio>
+    <audio id="ombu_audio" src="https://upload.wikimedia.org/wikipedia/commons/8/80/PR-open-mid_back_unrounded_vowel2.ogg"></audio>
+    <audio id="ombr_audio" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/PR-open-mid_back_rounded_vowel.ogg"></audio>
+    <audio id="nofv_audio" src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Near-open_front_unrounded_vowel.ogg"></audio>
+    <audio id="nocv_audio" src="https://upload.wikimedia.org/wikipedia/commons/2/22/Near-open_central_unrounded_vowel.ogg"></audio>
+    <audio id="ofu_audio" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/PR-open_front_unrounded_vowel.ogg"></audio>
+    <audio id="ofr_audio" src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Open_front_rounded_vowel.ogg"></audio>
+    <audio id="ocu_audio" src="https://upload.wikimedia.org/wikipedia/commons/5/50/Open_central_unrounded_vowel.ogg"></audio>
+    <audio id="ocr_audio" src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Open_central_rounded_vowel.ogg"></audio>
+    <audio id="obu_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Open_back_unrounded_vowel.ogg"></audio>
+    <audio id="obr_audio" src="https://upload.wikimedia.org/wikipedia/commons/3/31/PR-open_back_rounded_vowel.ogg"></audio>
+  </div>
 
+  <audio id="bn_audio" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Bilabial_nasal.ogg"></audio>
 
+  <audio id="ldn_audio" src="https://upload.wikimedia.org/wikipedia/commons/1/18/Labiodental_nasal.ogg"></audio>
 
+  <audio id="an_audio" src="https://upload.wikimedia.org/wikipedia/commons/2/29/Alveolar_nasal.ogg"></audio>
+
+  <audio id="rn_audio" src="https://upload.wikimedia.org/wikipedia/commons/a/af/Retroflex_nasal.ogg"></audio>
+
+  <audio id="pn_audio" src="https://upload.wikimedia.org/wikipedia/commons/4/46/Palatal_nasal.ogg"></audio>
+
+  <audio id="vn_audio" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Velar_nasal.ogg"></audio>
+
+  <audio id="un_audio" src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Uvular_nasal.ogg"></audio>
+
+  <audio id="-bp_audio" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Voiceless_bilabial_plosive.ogg"></audio>
+
+  <audio id="bp_audio" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Voiced_bilabial_plosive.ogg"></audio>
+
+  <audio id="-llp_audio" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Voiceless_linguolabial_stop.ogg"></audio>
+
+  <audio id="llp_audio" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Voiced_linguolabial_stop.ogg"></audio>
+
+  <audio id="-dp_audio" src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Voiceless_dental_stop.ogg"></audio>
+
+  <audio id="dp_audio" src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Voiced_dental_stop.ogg"></audio>
+
+  <audio id="-ap_audio" src="https://upload.wikimedia.org/wikipedia/commons/0/02/Voiceless_alveolar_plosive.ogg"></audio>
+
+  <audio id="ap_audio" src="https://upload.wikimedia.org/wikipedia/commons/0/01/Voiced_alveolar_plosive.ogg"></audio>
+
+  <audio id="-rp_audio" src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Voiceless_retroflex_stop.oga"></audio>
+
+  <audio id="rp_audio" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Voiced_retroflex_stop.oga"></audio>
+
+  <audio id="-pp_audio" src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Voiceless_palatal_plosive.ogg"></audio>
+
+  <audio id="pp_audio" src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Voiced_palatal_plosive.ogg"></audio>
+
+  <audio id="-vp_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Voiceless_velar_plosive.ogg"></audio>
+
+  <audio id="vp_audio" src="https://upload.wikimedia.org/wikipedia/commons/1/12/Voiced_velar_plosive_02.ogg"></audio>
+
+  <audio id="-up_audio" src="https://upload.wikimedia.org/wikipedia/commons/1/19/Voiceless_uvular_plosive.ogg"></audio>
+
+  <audio id="up_audio" src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Voiced_uvular_stop.oga"></audio>
+
+  <audio id="-php_audio" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Epiglottal_stop.ogg"></audio>
+
+  <audio id="-gp_audio" src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Glottal_stop.ogg"></audio>
+
+  <audio id="-dsa_audio" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Voiceless_dental_sibilant_affricate.oga"></audio>
+
+  <audio id="dsa_audio" src="https://upload.wikimedia.org/wikipedia/commons/1/16/Voiced_dental_sibilant_affricate.oga"></audio>
+
+  <audio id="-asa_audio" src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Voiceless_alveolar_sibilant_affricate.oga"></audio>
+
+  <audio id="asa_audio" src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Voiced_alveolar_sibilant_affricate.oga"></audio>
+
+  <audio id="-pasa_audio" src="https://upload.wikimedia.org/wikipedia/commons/9/97/Voiceless_palato-alveolar_affricate.ogg"></audio>
+
+  <audio id="pasa_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Voiced_palato-alveolar_affricate.ogg"></audio>
+
+  <audio id="-rsa_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Voiceless_retroflex_affricate.ogg"></audio>
+
+  <audio id="rsa_audio" src="https://upload.wikimedia.org/wikipedia/commons/5/58/Voiced_retroflex_affricate.ogg"></audio>
+
+  <audio id="-psa_audio" src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Voiceless_alveolo-palatal_affricate.ogg"></audio>
+
+  <audio id="psa_audio" src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Voiced_alveolo-palatal_affricate.ogg"></audio>
+
+  <audio id="-bnsa_audio" src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Voiceless_bilabial_affricate.ogg"></audio>
+
+  <audio id="-ldnsa_audio" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Voiceless_labiodental_affricate.ogg"></audio>
+
+  <audio id="ldnsa_audio" src="https://upload.wikimedia.org/wikipedia/commons/3/33/Voiced_labiodental_affricate.ogg"></audio>
+
+  <audio id="-dnsa_audio" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Voiced_dental_non-sibilant_affricate.oga"></audio>
+
+  <audio id="dnsa_audio" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Voiced_dental_non-sibilant_affricate.oga"></audio>
+
+  <audio id="-pansa_audio" src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Voiceless_postalveolar_non-sibilant_affricate.ogg"></audio>
+
+  <audio id="pansa_audio" src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Voiced_postalveolar_non-sibilant_affricate.ogg"></audio>
+
+  <audio id="-pnsa_audio" src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Voiceless_palatal_affricate.ogg"></audio>
+
+  <audio id="pnsa_audio" src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Voiced_palatal_affricate.ogg"></audio>
+
+  <audio id="-vnsa_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Voiceless_velar_affricate.ogg"></audio>
+
+  <audio id="vnsa_audio" src="https://upload.wikimedia.org/wikipedia/commons/7/75/Voiced_velar_affricate.ogg"></audio>
+
+  <audio id="-unsa_audio" src="https://upload.wikimedia.org/wikipedia/commons/4/43/Voiceless_uvular_affricate.ogg"></audio>
+
+  <audio id="unsa_audio" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Voiced_uvular_affricate.ogg"></audio>
+
+  <audio id="-phnsa_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Voiceless_epiglottal_affricate.ogg"></audio>
+
+  <audio id="phnsa_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Voiced_epiglottal_affricate.ogg"></audio>
+
+  <audio id="-gnsa_audio" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Voiceless_glottal_affricate.ogg"></audio>
+
+  <audio id="-asf_audio" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Voiceless_alveolar_sibilant.ogg"></audio>
+
+  <audio id="asf_audio" src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Voiced_alveolar_sibilant.ogg"></audio>
+
+  <audio id="-pasf_audio" src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Voiceless_palato-alveolar_sibilant.ogg"></audio>
+
+  <audio id="pasf_audio" src="https://upload.wikimedia.org/wikipedia/commons/3/30/Voiced_palato-alveolar_sibilant.ogg"></audio>
+
+  <audio id="-rsf_audio" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Voiceless_retroflex_sibilant.ogg"></audio>
+
+  <audio id="rsf_audio" src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Voiced_retroflex_sibilant.ogg"></audio>
+
+  <audio id="-psf_audio" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Voiceless_alveolo-palatal_sibilant.ogg"></audio>
+
+  <audio id="psf_audio" src="https://upload.wikimedia.org/wikipedia/commons/1/15/Voiced_alveolo-palatal_sibilant.ogg"></audio>
+
+  <audio id="-bnsf_audio" src="https://upload.wikimedia.org/wikipedia/commons/4/41/Voiceless_bilabial_fricative.ogg"></audio>
+
+  <audio id="bnsf_audio" src="https://upload.wikimedia.org/wikipedia/commons/3/37/Voiced_bilabial_fricative.ogg"></audio>
+
+  <audio id="-ldnsf_audio" src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Voiceless_labio-dental_fricative.ogg"></audio>
+
+  <audio id="ldnsf_audio" src="https://upload.wikimedia.org/wikipedia/commons/4/42/Voiced_labio-dental_fricative.ogg"></audio>
+
+  <audio id="-llnsf_audio" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Voiceless_linguolabial_fricative.ogg"></audio>
+
+  <audio id="-dnsf_audio" src="https://upload.wikimedia.org/wikipedia/commons/8/80/Voiceless_dental_fricative.ogg"></audio>
+
+  <audio id="dnsf_audio" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Voiced_dental_fricative.ogg"></audio>
+
+  <audio id="-ansf_audio" src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Voiceless_alveolar_non-sibilant_fricative.ogg"></audio>
+
+  <audio id="ansf_audio" src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Voiced_alveolar_non-sibilant_fricative.ogg"></audio>
+
+  <audio id="-pansf_audio" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Voiceless_postalveolar_non-sibilant_fricative.ogg"></audio>
+
+  <audio id="pansf_audio" src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Voiced_postalveolar_non-sibilant_fricative.ogg"></audio>
+
+  <audio id="-pnsf_audio" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Voiceless_palatal_fricative.ogg"></audio>
+
+  <audio id="pnsf_audio" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Voiced_palatal_fricative.ogg"></audio>
+
+  <audio id="-vnsf_audio" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Voiceless_velar_fricative.ogg"></audio>
+
+  <audio id="vnsf_audio" src="https://upload.wikimedia.org/wikipedia/commons/4/47/Voiced_velar_fricative.ogg"></audio>
+
+  <audio id="-unsf_audio" src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Voiceless_uvular_fricative.ogg"></audio>
+
+  <audio id="unsf_audio" src="https://upload.wikimedia.org/wikipedia/commons/a/af/Voiced_uvular_fricative.ogg"></audio>
+
+  <audio id="-phnsf_audio" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Voiceless_pharyngeal_fricative.ogg"></audio>
+
+  <audio id="phnsf_audio" src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Voiced_pharyngeal_fricative.ogg"></audio>
+
+  <audio id="-gnsf_audio" src="https://upload.wikimedia.org/wikipedia/commons/d/da/Voiceless_glottal_fricative.ogg"></audio>
+
+  <audio id="gnsf_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Voiced_glottal_fricative.ogg"></audio>
