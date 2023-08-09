@@ -15,15 +15,22 @@
 body {
   display: flex;
   flex-direction: column;
-  font-family: serif;
+  font-family: "Voces";
 }
 
-.vowel {
+label {
+  margin-right: 10px;
+}
+option {
+  font-family: "serif"
+}
+
+.phoneme {
   font-size: 20px;
-  font-family: Serif;
+  font-family: "serif";
 }
 
-.vowel:hover {
+.phoneme:hover {
   color: var(--glow-color);
   cursor: pointer;
   outline-style: none;
@@ -40,6 +47,10 @@ body {
     0 0 151px var(--glow-color);
 }
 
+.norecording:hover {
+  color: #929292 !important;
+}
+
 #selection {
   border: none;
 }
@@ -50,10 +61,11 @@ body {
   width: fit-content;
   border: 1px solid black;
   display: flex;
-  min-width: 200px;
+  min-width: 220px;
   min-height: 20px;
   max-width: 75%;
 }
+
 
 #vowels .inner_container {
   width: 500px;
@@ -63,7 +75,7 @@ body {
 .inner_container {
   position: relative;
   width: fit-content;
-  display: none;
+/*  display: none; */
   overflow-x: scroll;
 }
 #consonants .inner_container div {
@@ -84,6 +96,7 @@ body {
   background-color: #fff;
   text-align: center;
   cursor: pointer;
+  font-family: "Voces";
 }
 
 #vowels {
@@ -93,8 +106,6 @@ body {
 
 #cf {
   position: relative;
-  width: 40px;
-  height: 30px;
   top: 10px;
   left: 10px;
 }
@@ -109,7 +120,7 @@ body {
 
 #cb {
   position: absolute;
-  width: 40px;
+  width: 60px;
   height: 30px;
   top: 10px;
   left: 315px;
@@ -296,4 +307,5 @@ th {
   background-color: #333;
   color: white;
   border: 1px solid #777;
+  font-family: "Voces";
 }
