@@ -1,15 +1,20 @@
 const vowels = document.querySelectorAll(".vowel");
 const consonants = document.querySelectorAll(".consonant");
+const phonemes = document.querySelectorAll(".phoneme");
 const labels = document.querySelectorAll(".label");
 const dialectSelect = document.getElementById('dialect_selector');
 let inventory = []
 const canvas = document.querySelector("#canvas");
 const ctx = canvas.getContext("2d")
-const GAE = ["ncnfu", "cfu", "ncnbr", "cbr", "omfu", "cmfu", "mcv", "mbr", "nofv", "nocv", "ocu", "obr"]
+const GAE = ["ncnfu", "cfu", "ncnbr", "cbr", "omfu", "cmfu", "mcv", "mbr", "nofv", "nocv", "ocu", "obr", "bn", "an", "vn", "-bp", "bp", "-ap", "ap", "-vp", "vp", "-paa", "paa", "-ldnsf", "ldnsf", "-dnsf", "dnsf", "-asf", "asf", "pasf", "-pasf", "-gnsf", "alap", "paa", "pa", ""]
 const dialects = {
   "empty": [],
   "GAE": GAE
 }
+
+var string = "Capricornncnfucfuncnbrcbromfucmfumcvmbrnofvnocvocuobrncnfucfuncnbrcbromfucmfumcvmbrnofvnocvocuobrncnfucfuncnbrcbromfucmfumcvmbrnofvnocvocuobrncnfucfuncnbrcbromfucmfumcvmbrnofvnocvocuobrncnfucfuncnbrcbromfucmfumcvmbrnofvnocvocuobr";
+var compressed = LZString.compressToEncodedURIComponent(string);
+string = LZString.decompressFromEncodedURIComponent(compressed);
 
 ctx.beginPath()
 ctx.moveTo(25, 35)
@@ -87,20 +92,11 @@ dialectSelect.addEventListener('change', function handleChange(event) {
   });
 })
 
-vowels.forEach(function(currentValue, currentIndex, listObj) {
-  currentValue.addEventListener("mousedown", function(e) {
-    if (e.button == 2) {
-      var audio = document.getElementById(currentValue.id.concat("_", "audio"));
-      audio.play();
-    }
-    if (e.button == 0) {
-      setPhoneme(currentValue.id, -1);
-      dialectSelect.value = "null"
-    }
-  }, false);
-});
-
-consonants.forEach(function(currentValue, currentIndex, listObj) {
+phonemes.forEach(function(currentValue, currentIndex, listObj) {
+currentValue.addEventListener("contextmenu", function(e) {e.preventDefault()})
+if (document.getElementById(currentValue.id.concat("_", "audio")) == null) {
+currentValue.classList.add("norecording")
+}
   currentValue.addEventListener("mousedown", function(e) {
     if (e.button == 2) {
       var audio = document.getElementById(currentValue.id.concat("_", "audio"));
