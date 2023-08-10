@@ -27,8 +27,19 @@ label {
   margin-right: 10px;
 }
 
+.hint {
+  background-color: #929292;
+  color: white;
+  margin: 5px;
+  padding: 10px;
+  position:absolute;
+  transform:translate(-100%,-100%);
+  outline: 2px solid white;
+  outline-offset: -5px;
+}
 .phoneme {
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 1;
 }
 
 .phoneme:hover {
@@ -63,14 +74,13 @@ label {
   border: 1px solid black;
   display: flex;
   flex-direction: column;
-  min-width: 220px;
   min-height: 20px;
 }
 
 #labels {
   top: -20px;
   left: 15px;
-  display:flex;
+  display: flex;
   align-items: center;
 }
 
@@ -292,11 +302,11 @@ td {
 }
 
 .consonant:hover {
+  --glow-color: #45a5ff;
   color: var(--glow-color);
   cursor: pointer;
   outline-style: none;
   user-select: none;
-  --glow-color: #45a5ff;
   text-shadow:
     0 0 7px var(--glow-color),
     0 0 10px var(--glow-color),
@@ -313,5 +323,4 @@ th {
   background-color: #333;
   color: white;
   border: 1px solid #777;
-  font-family: "Voces";
 }
