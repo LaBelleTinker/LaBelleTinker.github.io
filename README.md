@@ -9,8 +9,17 @@
     </select>
   </div>
 
-  <div class="outer_container" id="vowels">
-    <div class="inner_container">
+  <div class="outer_container" id="phonemes">
+  <div id="labels" class="inner_container">
+      <div class="label" id="vowels_label">
+        <span>Vowels</span>
+      </div>
+
+      <div class="label" id="pconsonants_label">
+        <span>Pulmonic<br>Consonants</span>
+      </div>
+    </div>
+    <div class="inner_container" id="vowels">
       <canvas id="canvas" height="310" width="500"></canvas>
       <div id="overlay">
         <div id="cf">
@@ -102,13 +111,7 @@
         </div>
       </div>
     </div>
-    <div class="label">
-      <span>Vowels</span>
-    </div>
-  </div>
-
-  <div class="outer_container" id="consonants">
-    <div class="inner_container">
+    <div class="inner_container" id="pconsonants">
       <div>
 
         <table>
@@ -119,6 +122,7 @@
               <th colspan="10">Coronal</th>
               <th colspan="5">Dorsal</th>
               <th colspan="4">Laryngeal</th>
+              <th rowspan="2"></th>
             </tr>
             <tr>
               <th colspan="2">Bilabial</th>
@@ -160,6 +164,7 @@
               <td></td>
               <td></td>
               <td></td>
+              <th>Nasal</th>
             </tr>
             <tr>
               <th>Plosive</th>
@@ -187,6 +192,7 @@
               <td></td>
               <td><span class="phoneme consonant" id="-gp">ʔ</span></td>
               <td></td>
+              <th>Plosive</th>
             </tr>
             <tr>
               <th>Sibilant affricate</th>
@@ -214,10 +220,10 @@
               <td></td>
               <td></td>
               <td></td>
+              <th>Sibilant affricate</th>
             </tr>
             <tr>
-              <th> Non-sibilant affricate
-              </th>
+              <th> Non-sibilant affricate</th>
               <td><span class="phoneme consonant" id="-bnsa">pɸ</span></td>
               <td><span class="phoneme consonant" id="bnsa">bβ</span></td>
               <td><span class="phoneme consonant" id="-ldnsa">p̪f</span></td>
@@ -242,6 +248,7 @@
               <td><span class="phoneme consonant" id="phnsa">ʡʢ</span></td>
               <td><span class="phoneme consonant" id="-gnsa">ʔh</span></td>
               <td></td>
+              <th> Non-sibilant affricate</th>
             </tr>
             <tr>
               <th>Sibilant fricative</th>
@@ -269,10 +276,10 @@
               <td></td>
               <td></td>
               <td></td>
+              <th>Sibilant fricative</th>
             </tr>
             <tr>
-              <th>Non-sibilant fricative
-              </th>
+              <th>Non-sibilant fricative</th>
               <td><span class="phoneme consonant" id="-bnsf">ɸ</span></td>
               <td><span class="phoneme consonant" id="bnsf">β</span></td>
               <td><span class="phoneme consonant" id="-ldnsf">f</span></td>
@@ -297,6 +304,7 @@
               <td><span class="phoneme consonant" id="phnsf">ʕ</span></td>
               <td><span class="phoneme consonant" id="-gnsf">h</span></td>
               <td><span class="phoneme consonant" id="gnsf">ɦ</span></td>
+              <th>Non-sibilant fricative</th>
             </tr>
             <tr>
               <th>Approximant</th>
@@ -324,6 +332,7 @@
               <td></td>
               <td></td>
               <td><span class="phoneme consonant" id="ga">ʔ̞</span></td>
+              <th>Approximant</th>
             </tr>
             <tr>
               <th>Tap/flap</th>
@@ -351,6 +360,7 @@
               <td><span class="phoneme consonant" id="phtf">ʡ̆</span></td>
               <td></td>
               <td></td>
+              <th>Tap/flap</th>
             </tr>
             <tr>
               <th>Trill</th>
@@ -378,6 +388,7 @@
               <td><span class="phoneme consonant" id="pht">ʢ</span></td>
               <td></td>
               <td></td>
+              <th>Trill</th>
             </tr>
             <tr>
               <th>Lateral affricate</th>
@@ -405,6 +416,7 @@
               <td></td>
               <td></td>
               <td></td>
+              <th>Lateral affricate</th>
             </tr>
             <tr>
               <th>Lateral fricative</th>
@@ -419,24 +431,23 @@
               <td><span class="phoneme consonant" id="-alf">ɬ</span></td>
               <td><span class="phoneme consonant" id="alf">ɮ</span></td>
               <td></td>
-              <td></td>
               <td><span class="phoneme consonant" id="-rlf">ꞎ</span></td>
+              <td><span class="phoneme consonant" id="rlf">𝼅</span></td>
+              <td></td>
+              <td><span class="phoneme consonant" id="-plf">𝼆</span></td>
+              <td><span class="phoneme consonant" id="plf">ʎ̝</span></td>
+              <td><span class="phoneme consonant" id="-vlf">𝼄</span></td>
+              <td><span class="phoneme consonant" id="vlf">ʟ̝</span></td>
               <td></td>
               <td></td>
-              <td><span class="phoneme consonant" id="pla">ʎ̝</span></td>
-              <td></td>
-              <td><span class="phoneme consonant" id="vla">ʟ̝</span></td>
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-              <td></td>
-              <td></td>
+              <th>Lateral fricative</th>
             </tr>
             <tr>
-              <th>
-                Lateral approximant
-              </th>
+              <th>Lateral approximant</th>
               <td></td>
               <td></td>
               <td></td>
@@ -461,13 +472,11 @@
               <td></td>
               <td></td>
               <td></td>
+              <th>Lateral approximant</th>
             </tr>
           </tbody>
         </table>
       </div>
-    </div>
-    <div class="label">
-      <span>Consonants</span>
     </div>
   </div>
 
@@ -668,3 +677,86 @@
   <audio id="-gnsf_audio" src="https://upload.wikimedia.org/wikipedia/commons/d/da/Voiceless_glottal_fricative.ogg"></audio>
 
   <audio id="gnsf_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Voiced_glottal_fricative.ogg"></audio>
+
+  <audio id="bapp_audio" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Bilabial_approximant.ogg"></audio>
+
+  <audio id="ldapp_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Labiodental_approximant.ogg"></audio>
+
+  <audio id="dapp_audio" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Voiced_dental_approximant.ogg"></audio>
+
+  <audio id="aapp_audio" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Alveolar_approximant.ogg"></audio>
+
+  <audio id="paapp_audio" src="https://upload.wikimedia.org/wikipedia/commons/3/33/Postalveolar_approximant.ogg"></audio>
+
+  <audio id="rapp_audio" src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Retroflex_Approximant2.oga"></audio>
+
+  <audio id="papp_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Palatal_approximant.ogg"></audio>
+
+  <audio id="vapp_audio" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Voiced_velar_approximant.ogg"></audio>
+
+  <audio id="uapp_audio" src="https://upload.wikimedia.org/wikipedia/commons/1/19/Voiced_Uvular_Approximant.ogg"></audio>
+
+  <audio id="ldtf_audio" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Labiodental_flap.ogg"></audio>
+
+  <audio id="atf_audio" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Alveolar_tap.ogg"></audio>
+
+  <audio id="rtf_audio" src="https://upload.wikimedia.org/wikipedia/commons/8/87/Retroflex_flap.ogg"></audio>
+
+  <audio id="phtf_audio" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Epiglottal_flap.oga"></audio>
+
+  <audio id="-bt_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Voiceless_bilabial_trill_with_aspiration.ogg"></audio>
+
+  <audio id="bt_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Bilabial_trill.ogg"></audio>
+
+  <audio id="-at_audio" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Voiceless_alveolar_trill.ogg"></audio>
+
+  <audio id="at_audio" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Alveolar_trill.ogg"></audio>
+
+  <audio id="pat_audio" src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Voiced_postalveolar_trill.ogg"></audio>
+
+  <audio id="rt_audio" src="https://upload.wikimedia.org/wikipedia/commons/2/29/Voiced_retroflex_trill.ogg"></audio>
+
+  <audio id="-ut_audio" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Voiceless_uvular_trill.ogg"></audio>
+
+  <audio id="ut_audio" src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Uvular_trill.ogg"></audio>
+
+  <audio id="-pht_audio" src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Voiceless_epiglottal_trill.ogg"></audio>
+
+  <audio id="pht_audio" src="https://upload.wikimedia.org/wikipedia/commons/1/18/Voiced_epiglottal_trill_2.ogg"></audio>
+
+  <audio id="-ala_audio" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Voiceless_alveolar_lateral_affricate.ogg"></audio>
+
+  <audio id="ala_audio" src="https://upload.wikimedia.org/wikipedia/commons/3/31/Voiced_alveolar_lateral_affricate.ogg"></audio>
+
+  <audio id="-pla_audio" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Voiceless_palatal_lateral_affricate.ogg"></audio>
+
+  <audio id="-vla_audio" src="hhttps://upload.wikimedia.org/wikipedia/commons/0/02/Voiceless_velar_lateral_affricate.ogg"></audio>
+
+  <audio id="vla_audio" src="https://upload.wikimedia.org/wikipedia/commons/9/93/Voiced_velar_lateral_affricate.ogg"></audio>
+
+  <audio id="-alf_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Voiceless_alveolar_lateral_fricative.ogg"></audio>
+
+  <audio id="alf_audio" src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Voiced_alveolar_lateral_fricative.ogg"></audio>
+
+  <audio id="-rlf_audio" src="https://upload.wikimedia.org/wikipedia/commons/5/54/Voiceless_retroflex_lateral_fricative.ogg"></audio>
+
+  <audio id="-plf_audio" src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Voiceless_palatal_lateral_fricative.ogg"></audio>
+
+  <audio id="-vlf_audio" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Voiceless_velar_lateral_fricative.ogg"></audio>
+
+  <audio id="vlf_audio" src="https://upload.wikimedia.org/wikipedia/commons/2/24/Voiced_velar_lateral_fricative.ogg"></audio>
+
+  <audio id="dlap_audio" src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Voiced_dental_lateral_approximant.ogg"></audio>
+
+  <audio id="alap_audio" src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Alveolar_lateral_approximant.ogg"></audio>
+
+  <audio id="palap_audio" src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Voiced_postalveolar_lateral_approximant.ogg"></audio>
+
+  <audio id="rlap_audio" src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Retroflex_lateral_approximant.ogg"></audio>
+
+  <audio id="plap_audio" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Palatal_lateral_approximant.ogg"></audio>
+
+  <audio id="vlap_audio" src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Velar_lateral_approximant.ogg"></audio>
+
+  <audio id="ulap_audio" src="https://upload.wikimedia.org/wikipedia/commons/7/73/Uvular_lateral_approximant.ogg"></audio>
+
