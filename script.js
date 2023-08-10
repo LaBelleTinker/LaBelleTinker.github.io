@@ -1,5 +1,5 @@
 const vowels = document.querySelectorAll(".vowel");
-const consonants = document.querySelectorAll(".consonant");
+const pconsonants = document.querySelectorAll(".consonant");
 const phonemes = document.querySelectorAll(".phoneme");
 const labels = document.querySelectorAll(".label");
 const dialectSelect = document.getElementById('dialect_selector');
@@ -84,19 +84,18 @@ dialectSelect.addEventListener('change', function handleChange(event) {
   if (dialect == "null") {
     return
   }
-  vowels.forEach(function(currentValue, currentIndex, listObj) {
+  phonemes.forEach(function(currentValue, currentIndex, listObj) {
     setPhoneme(currentValue.id, dialects[dialect].includes(currentValue.id) ? 1 : 0);
-  });
-  consonants.forEach(function(currentValue, currentIndex, listObj) {
-    setPhoneme(currentValue.id, dialects[dialect].includes(currentValue.id) ? 1 : 0);
-  });
-})
+}
+)})
 
 phonemes.forEach(function(currentValue, currentIndex, listObj) {
-currentValue.addEventListener("contextmenu", function(e) {e.preventDefault()})
-if (document.getElementById(currentValue.id.concat("_", "audio")) == null) {
-currentValue.classList.add("norecording")
-}
+  currentValue.addEventListener("contextmenu", function(e) {
+    e.preventDefault()
+  })
+  if (document.getElementById(currentValue.id.concat("_", "audio")) == null) {
+    currentValue.classList.add("norecording")
+  }
   currentValue.addEventListener("mousedown", function(e) {
     if (e.button == 2) {
       var audio = document.getElementById(currentValue.id.concat("_", "audio"));
@@ -112,10 +111,16 @@ currentValue.classList.add("norecording")
 labels.forEach(function(currentValue, currentIndex, listObj) {
   currentValue.addEventListener("mousedown", function(e) {
     if (e.button == 0) {
-      inner = currentValue.offsetParent.querySelector(".inner_container")
-      if (inner.style.display == "none") {
-      inner.style.display = "flex";}
-      else {inner.style.display = "none"}
+      inners = currentValue.offsetParent.offsetParent.querySelectorAll(".inner_container")
+      inners.forEach(function(inner, innerIndex, innerListObj) {
+          console.log(inner.id)
+        if (inner.id == "labels") {}
+        else if (inner.id == currentValue.id.split("_")[0]) {
+          inner.style.display = "flex"
+        } else {
+          inner.style.display = "none"
+        }
+      })
     }
   }, false);
 });
