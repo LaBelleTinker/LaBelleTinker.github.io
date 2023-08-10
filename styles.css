@@ -20,19 +20,15 @@
 body {
   display: flex;
   flex-direction: column;
-  font-family: "Voces";
+  font-family: "GentiumPlus", serif;
 }
 
 label {
   margin-right: 10px;
 }
-option {
-  font-family: "serif"
-}
 
 .phoneme {
   font-size: 20px;
-  font-family: GentiumPlus;
 }
 
 .phoneme:hover {
@@ -63,27 +59,40 @@ option {
 .outer_container {
   position: relative;
   margin: 20px;
-  width: fit-content;
+  width: 75%;
   border: 1px solid black;
   display: flex;
+  flex-direction: column;
   min-width: 220px;
   min-height: 20px;
-  max-width: 75%;
+}
+
+#labels {
+  top: -20px;
+  left: 15px;
+  display:flex;
+  align-items: center;
 }
 
 
-#vowels .inner_container {
+#vowels {
   width: 500px;
   height: 310px;
+  top: -20px;
+}
+
+#pconsonants {
+  padding: 10px;
+  display: none;
+  top: -10px;
 }
 
 .inner_container {
   position: relative;
-  width: fit-content;
-/*  display: none; */
-  overflow-x: scroll;
 }
-#consonants .inner_container div {
+#pconsonants div {
+  overflow-x: scroll;
+  width: 100%;
   overflow-x: scroll;
 }
 
@@ -92,21 +101,18 @@ option {
 }
 
 .label {
-  position: absolute;
   user-select: none;
-  top: -10px;
-  left: 15px;
   padding-left: 7px;
   padding-right: 7px;
+  margin-right: 20px;
   background-color: #fff;
   text-align: center;
-  cursor: pointer;
-  font-family: "Voces";
-}
+  cursor: pointer;;}
 
 #vowels {
   width: 500;
   height: 310;
+  display: flex;
 }
 
 #cf {
@@ -266,11 +272,6 @@ option {
 
 canvas {
   position: absolute;
-}
-
-#consonants .inner_container {
-  padding: 10px;
-  padding-top: 15px;
 }
 
 table {
