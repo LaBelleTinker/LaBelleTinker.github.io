@@ -1,3 +1,8 @@
+@font-face {
+  font-family: GentiumPlus;
+  src: url(GentiumPlus-Regular.ttf);
+}
+
 .selected {
   --glow-color: #45a5ff;
   color: #2269ab;
@@ -27,7 +32,7 @@ option {
 
 .phoneme {
   font-size: 20px;
-  font-family: "serif";
+  font-family: GentiumPlus;
 }
 
 .phoneme:hover {
