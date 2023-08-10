@@ -79,6 +79,14 @@ let setPhoneme = function(phoneme, value) {
   }
 }
 
+document.addEventListener('mousemove', function(e) {
+  let hint = document.getElementById('no_audio');
+  let left = e.offsetX;
+  let top = e.offsetY;
+  hint.style.left = left + 'px';
+  hint.style.top = top + 'px';
+});
+
 dialectSelect.addEventListener('change', function handleChange(event) {
   dialect = event.target.value;
   if (dialect == "null") {
