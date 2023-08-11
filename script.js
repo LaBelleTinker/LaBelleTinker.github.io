@@ -81,8 +81,8 @@ let setPhoneme = function(phoneme, value) {
 
 document.addEventListener('mousemove', function(e) {
   let hint = document.getElementById('no_audio');
-  let left = e.offsetX;
-  let top = e.offsetY;
+  let left = e.pageX;
+  let top = e.pageY;
   hint.style.left = left + 'px';
   hint.style.top = top + 'px';
 });
@@ -94,8 +94,8 @@ dialectSelect.addEventListener('change', function handleChange(event) {
   }
   phonemes.forEach(function(currentValue, currentIndex, listObj) {
     setPhoneme(currentValue.id, dialects[dialect].includes(currentValue.id) ? 1 : 0);
-}
-)})
+  })
+})
 
 phonemes.forEach(function(currentValue, currentIndex, listObj) {
   currentValue.addEventListener("contextmenu", function(e) {
@@ -106,8 +106,17 @@ phonemes.forEach(function(currentValue, currentIndex, listObj) {
   }
   currentValue.addEventListener("mousedown", function(e) {
     if (e.button == 2) {
-      var audio = document.getElementById(currentValue.id.concat("_", "audio"));
-      audio.play();
+      if (currentValue.classList.contains("norecording")) {
+        hint = document.getElementById("no_audio");
+        hint.style.display = "flex"
+        setTimeout(() => {
+          hint.style.display = "none";
+        }, 5000);
+      } else {
+        var audio = document.getElementById(currentValue.id.concat("_", "audio"));
+        audio.play();
+      }
+
     }
     if (e.button == 0) {
       setPhoneme(currentValue.id, -1);
@@ -119,14 +128,20 @@ phonemes.forEach(function(currentValue, currentIndex, listObj) {
 labels.forEach(function(currentValue, currentIndex, listObj) {
   currentValue.addEventListener("mousedown", function(e) {
     if (e.button == 0) {
+      currentValue.classList.add("selected");
       inners = currentValue.offsetParent.offsetParent.querySelectorAll(".inner_container")
+      labels.forEach(function(label, i, obj) {
+        if (label != currentValue) {
+          label.classList.remove("selected")
+        }
+      })
       inners.forEach(function(inner, innerIndex, innerListObj) {
-          console.log(inner.id)
-        if (inner.id == "labels") {}
-        else if (inner.id == currentValue.id.split("_")[0]) {
-          inner.style.display = "flex"
+        if (inner.id == "labels") {} else if (inner.id == currentValue.id.split("_")[0]) {
+          console.log("select" + currentValue.id);
+          inner.style.display = "flex";
         } else {
-          inner.style.display = "none"
+          console.log("unselect" + currentValue.id);
+          inner.style.display = "none";
         }
       })
     }
