@@ -1,16 +1,6 @@
-<head>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital@1&display=swap" rel="stylesheet">
-  <script language="javascript" src="https://cdn.rawgit.com/pieroxy/lz-string/861d3feda0c9a8b7a48aaf3c028ab57606f1c02f/libs/lz-string.js"></script>
-</head>
-
-<body>
-
 <div class="hint" id="no_audio">
-<span>There is no recording <br>of this phoneme</span>
-</div>
+    <span>There is no recording <br>of this phoneme</span>
+  </div>
 
   <div class="outer_container" id="selection">
     <label for="dialect">Select inventory:</label>
@@ -22,13 +12,16 @@
   </div>
 
   <div class="outer_container" id="phonemes">
-  <div id="labels" class="inner_container">
-      <div class="label" id="vowels_label">
+    <div id="labels" class="inner_container">
+      <div class="label selected" id="vowels_label">
         <span>Vowels</span>
       </div>
 
       <div class="label" id="pconsonants_label">
-        <span>Pulmonic<br>Consonants</span>
+        <span>Pulmonics</span>
+      </div>
+      <div class="label" id="npconsonants_label">
+        <span>Non-Pulmonics</span>
       </div>
     </div>
     <div class="inner_container" id="vowels">
@@ -125,7 +118,6 @@
     </div>
     <div class="inner_container" id="pconsonants">
       <div>
-
         <table>
           <tbody>
             <tr>
@@ -152,26 +144,26 @@
             </tr>
             <tr>
               <th>Nasal</th>
-              <td><span class="phoneme consonant norecording" id="-bn">m̥</span></td>
-              <td><span class="phoneme consonant" id="bn">m</span></td>
+              <td><span class="phoneme pconsonant norecording" id="-bn">m̥</span></td>
+              <td><span class="phoneme pconsonant" id="bn">m</span></td>
               <td></td>
-              <td><span class="phoneme consonant" id="ldn">ɱ</span></td>
+              <td><span class="phoneme pconsonant" id="ldn">ɱ</span></td>
               <td></td>
-              <td><span class="phoneme consonant" id="lln">n̼</span></td>
-              <td></td>
-              <td></td>
-              <td><span class="phoneme consonant" id="-an">n̥</span></td>
-              <td><span class="phoneme consonant" id="an">n</span></td>
+              <td><span class="phoneme pconsonant" id="lln">n̼</span></td>
               <td></td>
               <td></td>
-              <td><span class="phoneme consonant" id="-rn">ɳ̊</span></td>
-              <td><span class="phoneme consonant" id="rn">ɳ</span></td>
-              <td><span class="phoneme consonant" id="-pn">ɲ̊</span></td>
-              <td><span class="phoneme consonant" id="pn">ɲ</span></td>
-              <td><span class="phoneme consonant" id="-vn">ŋ̊</span></td>
-              <td><span class="phoneme consonant" id="vn">ŋ</span></td>
+              <td><span class="phoneme pconsonant" id="-an">n̥</span></td>
+              <td><span class="phoneme pconsonant" id="an">n</span></td>
               <td></td>
-              <td><span class="phoneme consonant" id="un">ɴ</span></td>
+              <td></td>
+              <td><span class="phoneme pconsonant" id="-rn">ɳ̊</span></td>
+              <td><span class="phoneme pconsonant" id="rn">ɳ</span></td>
+              <td><span class="phoneme pconsonant" id="-pn">ɲ̊</span></td>
+              <td><span class="phoneme pconsonant" id="pn">ɲ</span></td>
+              <td><span class="phoneme pconsonant" id="-vn">ŋ̊</span></td>
+              <td><span class="phoneme pconsonant" id="vn">ŋ</span></td>
+              <td></td>
+              <td><span class="phoneme pconsonant" id="un">ɴ</span></td>
               <td></td>
               <td></td>
               <td></td>
@@ -180,29 +172,29 @@
             </tr>
             <tr>
               <th>Plosive</th>
-              <td><span class="phoneme consonant" id="-bp">p</span></td>
-              <td><span class="phoneme consonant" id="bp">b</span></td>
-              <td><span class="phoneme consonant" id="-ldp">p̪</span></td>
-              <td><span class="phoneme consonant" id="ldp">b̪</span></td>
-              <td><span class="phoneme consonant" id="-llp">t̼</span></td>
-              <td><span class="phoneme consonant" id="llp">d̼</span></td>
-              <td><span class="phoneme consonant" id="-dp">t̪</span></td>
-              <td><span class="phoneme consonant" id="dp">d̪</span></td>
-              <td><span class="phoneme consonant" id="-ap">t</span></td>
-              <td><span class="phoneme consonant" id="ap">d</span></td>
+              <td><span class="phoneme pconsonant" id="-bp">p</span></td>
+              <td><span class="phoneme pconsonant" id="bp">b</span></td>
+              <td><span class="phoneme pconsonant" id="-ldp">p̪</span></td>
+              <td><span class="phoneme pconsonant" id="ldp">b̪</span></td>
+              <td><span class="phoneme pconsonant" id="-llp">t̼</span></td>
+              <td><span class="phoneme pconsonant" id="llp">d̼</span></td>
+              <td><span class="phoneme pconsonant" id="-dp">t̪</span></td>
+              <td><span class="phoneme pconsonant" id="dp">d̪</span></td>
+              <td><span class="phoneme pconsonant" id="-ap">t</span></td>
+              <td><span class="phoneme pconsonant" id="ap">d</span></td>
               <td></td>
               <td></td>
-              <td><span class="phoneme consonant" id="-rp">ʈ</span></td>
-              <td><span class="phoneme consonant" id="rp">ɖ</span></td>
-              <td><span class="phoneme consonant" id="-pp">c</span></td>
-              <td><span class="phoneme consonant" id="pp">ɟ</span></td>
-              <td><span class="phoneme consonant" id="-vp">k</span></td>
-              <td><span class="phoneme consonant" id="vp">ɡ</span></td>
-              <td><span class="phoneme consonant" id="-up">q</span></td>
-              <td><span class="phoneme consonant" id="up">ɢ</span></td>
-              <td><span class="phoneme consonant" id="-php">ʡ</span></td>
+              <td><span class="phoneme pconsonant" id="-rp">ʈ</span></td>
+              <td><span class="phoneme pconsonant" id="rp">ɖ</span></td>
+              <td><span class="phoneme pconsonant" id="-pp">c</span></td>
+              <td><span class="phoneme pconsonant" id="pp">ɟ</span></td>
+              <td><span class="phoneme pconsonant" id="-vp">k</span></td>
+              <td><span class="phoneme pconsonant" id="vp">ɡ</span></td>
+              <td><span class="phoneme pconsonant" id="-up">q</span></td>
+              <td><span class="phoneme pconsonant" id="up">ɢ</span></td>
+              <td><span class="phoneme pconsonant" id="-php">ʡ</span></td>
               <td></td>
-              <td><span class="phoneme consonant" id="-gp">ʔ</span></td>
+              <td><span class="phoneme pconsonant" id="-gp">ʔ</span></td>
               <td></td>
               <th>Plosive</th>
             </tr>
@@ -214,16 +206,16 @@
               <td></td>
               <td></td>
               <td></td>
-              <td><span class="phoneme consonant" id="-dsa">t̪s̪</span></td>
-              <td><span class="phoneme consonant" id="dsa">d̪z̪</span></td>
-              <td><span class="phoneme consonant" id="-asa">ts</span></td>
-              <td><span class="phoneme consonant" id="asa">dz</span></td>
-              <td><span class="phoneme consonant" id="-pasa">t̠ʃ</span></td>
-              <td><span class="phoneme consonant" id="pasa">d̠ʒ</span></td>
-              <td><span class="phoneme consonant" id="-rsa">tʂ</span></td>
-              <td><span class="phoneme consonant" id="rsa">dʐ</span></td>
-              <td><span class="phoneme consonant" id="-psa">tɕ</span></td>
-              <td><span class="phoneme consonant" id="psa">dʑ</span></td>
+              <td><span class="phoneme pconsonant" id="-dsa">t̪s̪</span></td>
+              <td><span class="phoneme pconsonant" id="dsa">d̪z̪</span></td>
+              <td><span class="phoneme pconsonant" id="-asa">ts</span></td>
+              <td><span class="phoneme pconsonant" id="asa">dz</span></td>
+              <td><span class="phoneme pconsonant" id="-pasa">t̠ʃ</span></td>
+              <td><span class="phoneme pconsonant" id="pasa">d̠ʒ</span></td>
+              <td><span class="phoneme pconsonant" id="-rsa">tʂ</span></td>
+              <td><span class="phoneme pconsonant" id="rsa">dʐ</span></td>
+              <td><span class="phoneme pconsonant" id="-psa">tɕ</span></td>
+              <td><span class="phoneme pconsonant" id="psa">dʑ</span></td>
               <td></td>
               <td></td>
               <td></td>
@@ -236,29 +228,29 @@
             </tr>
             <tr>
               <th> Non-sibilant affricate</th>
-              <td><span class="phoneme consonant" id="-bnsa">pɸ</span></td>
-              <td><span class="phoneme consonant" id="bnsa">bβ</span></td>
-              <td><span class="phoneme consonant" id="-ldnsa">p̪f</span></td>
-              <td><span class="phoneme consonant" id="ldnsa">b̪v</span></td>
+              <td><span class="phoneme pconsonant" id="-bnsa">pɸ</span></td>
+              <td><span class="phoneme pconsonant" id="bnsa">bβ</span></td>
+              <td><span class="phoneme pconsonant" id="-ldnsa">p̪f</span></td>
+              <td><span class="phoneme pconsonant" id="ldnsa">b̪v</span></td>
               <td></td>
               <td></td>
-              <td><span class="phoneme consonant" id="-dnsa">t̪θ</span></td>
-              <td><span class="phoneme consonant" id="dnsa">d̪ð</span></td>
-              <td><span class="phoneme consonant" id="-ansa">tɹ̝̊</span></td>
-              <td><span class="phoneme consonant" id="ansa">dɹ̝</span></td>
-              <td><span class="phoneme consonant" id="-pansa">t̠ɹ̠̊˔</span></td>
-              <td><span class="phoneme consonant" id="pansa">d̠ɹ̠˔</span></td>
+              <td><span class="phoneme pconsonant" id="-dnsa">t̪θ</span></td>
+              <td><span class="phoneme pconsonant" id="dnsa">d̪ð</span></td>
+              <td><span class="phoneme pconsonant" id="-ansa">tɹ̝̊</span></td>
+              <td><span class="phoneme pconsonant" id="ansa">dɹ̝</span></td>
+              <td><span class="phoneme pconsonant" id="-pansa">t̠ɹ̠̊˔</span></td>
+              <td><span class="phoneme pconsonant" id="pansa">d̠ɹ̠˔</span></td>
               <td></td>
               <td></td>
-              <td><span class="phoneme consonant" id="-pnsa">cç</span></td>
-              <td><span class="phoneme consonant" id="pnsa">ɟʝ</span></td>
-              <td><span class="phoneme consonant" id="-vnsa">kx</span></td>
-              <td><span class="phoneme consonant" id="vnsa">ɡɣ</span></td>
-              <td><span class="phoneme consonant" id="-unsa">qχ</span></td>
-              <td><span class="phoneme consonant" id="unsa">ɢʁ</span></td>
-              <td><span class="phoneme consonant" id="-phnsa">ʡʜ</span></td>
-              <td><span class="phoneme consonant" id="phnsa">ʡʢ</span></td>
-              <td><span class="phoneme consonant" id="-gnsa">ʔh</span></td>
+              <td><span class="phoneme pconsonant" id="-pnsa">cç</span></td>
+              <td><span class="phoneme pconsonant" id="pnsa">ɟʝ</span></td>
+              <td><span class="phoneme pconsonant" id="-vnsa">kx</span></td>
+              <td><span class="phoneme pconsonant" id="vnsa">ɡɣ</span></td>
+              <td><span class="phoneme pconsonant" id="-unsa">qχ</span></td>
+              <td><span class="phoneme pconsonant" id="unsa">ɢʁ</span></td>
+              <td><span class="phoneme pconsonant" id="-phnsa">ʡʜ</span></td>
+              <td><span class="phoneme pconsonant" id="phnsa">ʡʢ</span></td>
+              <td><span class="phoneme pconsonant" id="-gnsa">ʔh</span></td>
               <td></td>
               <th> Non-sibilant affricate</th>
             </tr>
@@ -272,14 +264,14 @@
               <td></td>
               <td></td>
               <td></td>
-              <td><span class="phoneme consonant" id="-asf">s</span></td>
-              <td><span class="phoneme consonant" id="asf">z</span></td>
-              <td><span class="phoneme consonant" id="-pasf">ʃ</span></td>
-              <td><span class="phoneme consonant" id="pasf">ʒ</span></td>
-              <td><span class="phoneme consonant" id="-rsf">ʂ</span></td>
-              <td><span class="phoneme consonant" id="rsf">ʐ</span></td>
-              <td><span class="phoneme consonant" id="-psf">ɕ</span></td>
-              <td><span class="phoneme consonant" id="psf">ʑ</span></td>
+              <td><span class="phoneme pconsonant" id="-asf">s</span></td>
+              <td><span class="phoneme pconsonant" id="asf">z</span></td>
+              <td><span class="phoneme pconsonant" id="-pasf">ʃ</span></td>
+              <td><span class="phoneme pconsonant" id="pasf">ʒ</span></td>
+              <td><span class="phoneme pconsonant" id="-rsf">ʂ</span></td>
+              <td><span class="phoneme pconsonant" id="rsf">ʐ</span></td>
+              <td><span class="phoneme pconsonant" id="-psf">ɕ</span></td>
+              <td><span class="phoneme pconsonant" id="psf">ʑ</span></td>
               <td></td>
               <td></td>
               <td></td>
@@ -292,112 +284,112 @@
             </tr>
             <tr>
               <th>Non-sibilant fricative</th>
-              <td><span class="phoneme consonant" id="-bnsf">ɸ</span></td>
-              <td><span class="phoneme consonant" id="bnsf">β</span></td>
-              <td><span class="phoneme consonant" id="-ldnsf">f</span></td>
-              <td><span class="phoneme consonant" id="ldnsf">v</span></td>
-              <td><span class="phoneme consonant" id="-llnsf">θ̼</span></td>
-              <td><span class="phoneme consonant" id="llnsf">ð̼</span></td>
-              <td><span class="phoneme consonant" id="-dnsf">θ</span></td>
-              <td><span class="phoneme consonant" id="dnsf">ð</span></td>
-              <td><span class="phoneme consonant" id="-ansf">θ̠</span></td>
-              <td><span class="phoneme consonant" id="ansf">ð̠</span></td>
-              <td><span class="phoneme consonant" id="-pansf">ɹ̠̊˔</span></td>
-              <td><span class="phoneme consonant" id="pansf">ɹ̠˔</span></td>
-              <td><span class="phoneme consonant" id="-rnsf">ɻ̊˔</span></td>
-              <td><span class="phoneme consonant" id="rnsf">ɻ˔</span></td>
-              <td><span class="phoneme consonant" id="-pnsf">ç</span></td>
-              <td><span class="phoneme consonant" id="pnsf">ʝ</span></td>
-              <td><span class="phoneme consonant" id="-vnsf">x</span></td>
-              <td><span class="phoneme consonant" id="vnsf">ɣ</span></td>
-              <td><span class="phoneme consonant" id="-unsf">χ</span></td>
-              <td><span class="phoneme consonant" id="unsf">ʁ</span></td>
-              <td><span class="phoneme consonant" id="-phnsf">ħ</span></td>
-              <td><span class="phoneme consonant" id="phnsf">ʕ</span></td>
-              <td><span class="phoneme consonant" id="-gnsf">h</span></td>
-              <td><span class="phoneme consonant" id="gnsf">ɦ</span></td>
+              <td><span class="phoneme pconsonant" id="-bnsf">ɸ</span></td>
+              <td><span class="phoneme pconsonant" id="bnsf">β</span></td>
+              <td><span class="phoneme pconsonant" id="-ldnsf">f</span></td>
+              <td><span class="phoneme pconsonant" id="ldnsf">v</span></td>
+              <td><span class="phoneme pconsonant" id="-llnsf">θ̼</span></td>
+              <td><span class="phoneme pconsonant" id="llnsf">ð̼</span></td>
+              <td><span class="phoneme pconsonant" id="-dnsf">θ</span></td>
+              <td><span class="phoneme pconsonant" id="dnsf">ð</span></td>
+              <td><span class="phoneme pconsonant" id="-ansf">θ̠</span></td>
+              <td><span class="phoneme pconsonant" id="ansf">ð̠</span></td>
+              <td><span class="phoneme pconsonant" id="-pansf">ɹ̠̊˔</span></td>
+              <td><span class="phoneme pconsonant" id="pansf">ɹ̠˔</span></td>
+              <td><span class="phoneme pconsonant" id="-rnsf">ɻ̊˔</span></td>
+              <td><span class="phoneme pconsonant" id="rnsf">ɻ˔</span></td>
+              <td><span class="phoneme pconsonant" id="-pnsf">ç</span></td>
+              <td><span class="phoneme pconsonant" id="pnsf">ʝ</span></td>
+              <td><span class="phoneme pconsonant" id="-vnsf">x</span></td>
+              <td><span class="phoneme pconsonant" id="vnsf">ɣ</span></td>
+              <td><span class="phoneme pconsonant" id="-unsf">χ</span></td>
+              <td><span class="phoneme pconsonant" id="unsf">ʁ</span></td>
+              <td><span class="phoneme pconsonant" id="-phnsf">ħ</span></td>
+              <td><span class="phoneme pconsonant" id="phnsf">ʕ</span></td>
+              <td><span class="phoneme pconsonant" id="-gnsf">h</span></td>
+              <td><span class="phoneme pconsonant" id="gnsf">ɦ</span></td>
               <th>Non-sibilant fricative</th>
             </tr>
             <tr>
               <th>Approximant</th>
               <td></td>
-              <td><span class="phoneme consonant" id="ba">β̞</span></td>
+              <td><span class="phoneme pconsonant" id="ba">β̞</span></td>
               <td></td>
-              <td><span class="phoneme consonant" id="lda">ʋ</span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><span class="phoneme consonant" id="da">ð̞</span></td>
-              <td></td>
-              <td><span class="phoneme consonant" id="aa">ɹ</span></td>
-              <td></td>
-              <td><span class="phoneme consonant" id="paa">ɹ̠</span></td>
-              <td></td>
-              <td><span class="phoneme consonant" id="ra">ɻ</span></td>
-              <td></td>
-              <td><span class="phoneme consonant" id="pa">j</span></td>
-              <td></td>
-              <td><span class="phoneme consonant" id="va">ɰ</span></td>
-              <td></td>
-              <td><span class="phoneme consonant" id="ua">ʁ̞</span></td>
+              <td><span class="phoneme pconsonant" id="lda">ʋ</span></td>
               <td></td>
               <td></td>
               <td></td>
-              <td><span class="phoneme consonant" id="ga">ʔ̞</span></td>
+              <td><span class="phoneme pconsonant" id="da">ð̞</span></td>
+              <td></td>
+              <td><span class="phoneme pconsonant" id="aa">ɹ</span></td>
+              <td></td>
+              <td><span class="phoneme pconsonant" id="paa">ɹ̠</span></td>
+              <td></td>
+              <td><span class="phoneme pconsonant" id="ra">ɻ</span></td>
+              <td></td>
+              <td><span class="phoneme pconsonant" id="pa">j</span></td>
+              <td></td>
+              <td><span class="phoneme pconsonant" id="va">ɰ</span></td>
+              <td></td>
+              <td><span class="phoneme pconsonant" id="ua">ʁ̞</span></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme pconsonant" id="ga">ʔ̞</span></td>
               <th>Approximant</th>
             </tr>
             <tr>
               <th>Tap/flap</th>
               <td></td>
-              <td><span class="phoneme consonant" id="btf">ⱱ̟</span></td>
+              <td><span class="phoneme pconsonant" id="btf">ⱱ̟</span></td>
               <td></td>
-              <td><span class="phoneme consonant" id="ldtf">ⱱ</span></td>
+              <td><span class="phoneme pconsonant" id="ldtf">ⱱ</span></td>
               <td></td>
-              <td><span class="phoneme consonant" id="lltf">ɾ̼</span></td>
-              <td></td>
-              <td></td>
-              <td><span class="phoneme consonant" id="-atf">ɾ̥</span></td>
-              <td><span class="phoneme consonant" id="atf">ɾ</span></td>
+              <td><span class="phoneme pconsonant" id="lltf">ɾ̼</span></td>
               <td></td>
               <td></td>
-              <td><span class="phoneme consonant" id="-rtf">ɽ̊</span></td>
-              <td><span class="phoneme consonant" id="rtf">ɽ</span></td>
+              <td><span class="phoneme pconsonant" id="-atf">ɾ̥</span></td>
+              <td><span class="phoneme pconsonant" id="atf">ɾ</span></td>
               <td></td>
               <td></td>
+              <td><span class="phoneme pconsonant" id="-rtf">ɽ̊</span></td>
+              <td><span class="phoneme pconsonant" id="rtf">ɽ</span></td>
               <td></td>
               <td></td>
               <td></td>
-              <td><span class="phoneme consonant" id="utf">ɢ̆</span></td>
               <td></td>
-              <td><span class="phoneme consonant" id="phtf">ʡ̆</span></td>
+              <td></td>
+              <td><span class="phoneme pconsonant" id="utf">ɢ̆</span></td>
+              <td></td>
+              <td><span class="phoneme pconsonant" id="phtf">ʡ̆</span></td>
               <td></td>
               <td></td>
               <th>Tap/flap</th>
             </tr>
             <tr>
               <th>Trill</th>
-              <td><span class="phoneme consonant" id="-bt">ʙ̥</span></td>
-              <td><span class="phoneme consonant" id="bt">ʙ</span></td>
+              <td><span class="phoneme pconsonant" id="-bt">ʙ̥</span></td>
+              <td><span class="phoneme pconsonant" id="bt">ʙ</span></td>
               <td></td>
               <td></td>
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-              <td><span class="phoneme consonant" id="-at">r̥</span></td>
-              <td><span class="phoneme consonant" id="at">r</span></td>
+              <td><span class="phoneme pconsonant" id="-at">r̥</span></td>
+              <td><span class="phoneme pconsonant" id="at">r</span></td>
               <td></td>
-              <td><span class="phoneme consonant" id="pat">r̠</span></td>
-              <td><span class="phoneme consonant" id="-rt">ɽ̊r̥</span></td>
-              <td><span class="phoneme consonant" id="rt">ɽr</span></td>
-              <td></td>
-              <td></td>
+              <td><span class="phoneme pconsonant" id="pat">r̠</span></td>
+              <td><span class="phoneme pconsonant" id="-rt">ɽ̊r̥</span></td>
+              <td><span class="phoneme pconsonant" id="rt">ɽr</span></td>
               <td></td>
               <td></td>
-              <td><span class="phoneme consonant" id="-ut">ʀ̥</span></td>
-              <td><span class="phoneme consonant" id="ut">ʀ</span></td>
-              <td><span class="phoneme consonant" id="-pht">ʜ</span></td>
-              <td><span class="phoneme consonant" id="pht">ʢ</span></td>
+              <td></td>
+              <td></td>
+              <td><span class="phoneme pconsonant" id="-ut">ʀ̥</span></td>
+              <td><span class="phoneme pconsonant" id="ut">ʀ</span></td>
+              <td><span class="phoneme pconsonant" id="-pht">ʜ</span></td>
+              <td><span class="phoneme pconsonant" id="pht">ʢ</span></td>
               <td></td>
               <td></td>
               <th>Trill</th>
@@ -412,16 +404,16 @@
               <td></td>
               <td></td>
               <td></td>
-              <td><span class="phoneme consonant" id="-ala">tɬ</span></td>
-              <td><span class="phoneme consonant" id="ala">dɮ</span></td>
+              <td><span class="phoneme pconsonant" id="-ala">tɬ</span></td>
+              <td><span class="phoneme pconsonant" id="ala">dɮ</span></td>
               <td></td>
               <td></td>
-              <td><span class="phoneme consonant" id="-rla">tꞎ</span></td>
-              <td><span class="phoneme consonant" id="rla">d𝼅</span></td>
-              <td><span class="phoneme consonant" id="-pla">c𝼆</span></td>
-              <td><span class="phoneme consonant" id="pla">ɟʎ̝</span></td>
-              <td><span class="phoneme consonant" id="-vla">k𝼄</span></td>
-              <td><span class="phoneme consonant" id="vla">ɡʟ̝</span></td>
+              <td><span class="phoneme pconsonant" id="-rla">tꞎ</span></td>
+              <td><span class="phoneme pconsonant" id="rla">d𝼅</span></td>
+              <td><span class="phoneme pconsonant" id="-pla">c𝼆</span></td>
+              <td><span class="phoneme pconsonant" id="pla">ɟʎ̝</span></td>
+              <td><span class="phoneme pconsonant" id="-vla">k𝼄</span></td>
+              <td><span class="phoneme pconsonant" id="vla">ɡʟ̝</span></td>
               <td></td>
               <td></td>
               <td></td>
@@ -440,16 +432,16 @@
               <td></td>
               <td></td>
               <td></td>
-              <td><span class="phoneme consonant" id="-alf">ɬ</span></td>
-              <td><span class="phoneme consonant" id="alf">ɮ</span></td>
+              <td><span class="phoneme pconsonant" id="-alf">ɬ</span></td>
+              <td><span class="phoneme pconsonant" id="alf">ɮ</span></td>
               <td></td>
-              <td><span class="phoneme consonant" id="-rlf">ꞎ</span></td>
-              <td><span class="phoneme consonant" id="rlf">𝼅</span></td>
+              <td><span class="phoneme pconsonant" id="-rlf">ꞎ</span></td>
+              <td><span class="phoneme pconsonant" id="rlf">𝼅</span></td>
               <td></td>
-              <td><span class="phoneme consonant" id="-plf">𝼆</span></td>
-              <td><span class="phoneme consonant" id="plf">ʎ̝</span></td>
-              <td><span class="phoneme consonant" id="-vlf">𝼄</span></td>
-              <td><span class="phoneme consonant" id="vlf">ʟ̝</span></td>
+              <td><span class="phoneme pconsonant" id="-plf">𝼆</span></td>
+              <td><span class="phoneme pconsonant" id="plf">ʎ̝</span></td>
+              <td><span class="phoneme pconsonant" id="-vlf">𝼄</span></td>
+              <td><span class="phoneme pconsonant" id="vlf">ʟ̝</span></td>
               <td></td>
               <td></td>
               <td></td>
@@ -467,19 +459,19 @@
               <td></td>
               <td></td>
               <td></td>
-              <td><span class="phoneme consonant" id="dlap">l̪</span></td>
+              <td><span class="phoneme pconsonant" id="dlap">l̪</span></td>
               <td></td>
-              <td><span class="phoneme consonant" id="alap">l</span></td>
+              <td><span class="phoneme pconsonant" id="alap">l</span></td>
               <td></td>
-              <td><span class="phoneme consonant" id="palap">l̠</span></td>
+              <td><span class="phoneme pconsonant" id="palap">l̠</span></td>
               <td></td>
-              <td><span class="phoneme consonant" id="rlap">ɭ</span></td>
+              <td><span class="phoneme pconsonant" id="rlap">ɭ</span></td>
               <td></td>
-              <td><span class="phoneme consonant" id="plap">ʎ</span></td>
+              <td><span class="phoneme pconsonant" id="plap">ʎ</span></td>
               <td></td>
-              <td><span class="phoneme consonant" id="vlap">ʟ</span></td>
+              <td><span class="phoneme pconsonant" id="vlap">ʟ</span></td>
               <td></td>
-              <td><span class="phoneme consonant" id="ulap">ʟ̠</span></td>
+              <td><span class="phoneme pconsonant" id="ulap">ʟ̠</span></td>
               <td></td>
               <td></td>
               <td></td>
@@ -488,6 +480,149 @@
             </tr>
           </tbody>
         </table>
+      </div>
+      <div>
+      <table>
+      <tbody>
+        <tr>
+        <th></th>
+          <th colspan="2">Labial-<br>Velar</th>
+          <th>Labial-<br>Palatal</th>
+          <th>Palatal-<br>Velar</th>
+          <th>Velarized<br>Alveolar</th>
+        </tr>
+        <tr>
+          <th>Nasal</th>
+        <td colspan="2">
+          <span class="phoneme pconsonant" id="lvn">ŋ͡m</span>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+          
+        </tr>
+        <tr>
+        <th>Plosive</th>
+        <td><span class="phoneme pconsonant" id="-lvp">k͡p</span></td>
+        <td><span class="phoneme pconsonant" id="lvp">ɡ͡b</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+          
+        </tr>
+        <tr>
+        <th>Fricative/<br>Approximant</th>
+        <td><span class="phoneme pconsonant" id="-lvf">ʍ</span></td>
+        <td><span class="phoneme pconsonant" id="lvf">w</span></td>
+        <td><span class="phoneme pconsonant" id="lpa">ɥ</span></td>
+        <td><span class="phoneme pconsonant" id="pvf">ɧ</span></td>
+        <td><span class="phoneme pconsonant" id="valap">ɫ</span></td>
+          
+        </tr>
+      </tbody>
+      </table>
+      </div>
+    </div>
+    <div class="inner_container" id="npconsonants">
+      <div>
+<table>
+<tbody>
+  <tr>
+  <th colspan="2"></th>
+              <th colspan="2">Bilabial</th>
+              <th colspan="2">Labio-dental</th>
+              <th colspan="2">Dental</th>
+              <th colspan="2">Alveolar</th>
+              <th colspan="2">Post-alveolar</th>
+              <th colspan="2">Retroflex</th>
+              <th colspan="2">Palatal</th>
+              <th colspan="2">Velar</th>
+              <th colspan="2">Uvular</th>
+              <th colspan="2">Pharyngeal/<br>epiglottal</th>
+  </tr>
+  <tr>
+  <th rowspan="4">Ejective</th>
+  <th>Stop</th>
+    <td colspan="2"><span class="phoneme npconsonant" id="bes">pʼ</span></td>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="aes">tʼ</span></td>
+    <td colspan="2"></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="res">ʈʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="pes">cʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="ves">kʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="ues">qʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="phes">ʡʼ</span></td>
+    
+  </tr>
+  <tr>
+  <th>Fricative</th>
+    <td colspan="2"></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="ldef">fʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="def">θʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="aef">sʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="paef">ʃʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="ref">ʂʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="pef">ɕʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="vef">xʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="uef">χʼ</span></td>
+    <td colspan="2"></td>
+  </tr>
+  <tr>
+  <th>Africate</th>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="aea">tsʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="paea">t̠ʃʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="rea">ʈʂʼ</span></td>
+    <td colspan="2"></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="vea">kxʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="uea">qχʼ</span></td>
+    <td colspan="2"></td>
+  </tr>
+  <tr>
+  <th>Lateral</th>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+    <td><span class="phoneme npconsonant" id="alef">ɬʼ</span></td>
+    <td><span class="phoneme npconsonant" id="alea">tɬʼ</span></td>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="vlea">k𝼄ʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="plea">c𝼆ʼ</span></td>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+  </tr>
+  <tr>
+  <th colspan="2">Click</th>
+    <td colspan="2"><span class="phoneme npconsonant" id="bc">k͡ʘ</span></td>
+    <td colspan="2"></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="dc">k͡ǀ </span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="ac">k͡ǃ </span></td>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="pc">k͡ǂ </span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="lvc">k͡ǁ</span></td>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+  </tr>
+  <tr>
+  <th colspan="2">Implosive</th>
+    <td colspan="2"><span class="phoneme npconsonant" id="bi">ɓ</span></td>
+    <td colspan="2"></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="di">ɗ</span></td>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="pi">ʄ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="vi">ɠ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="ui">ʛ</span></td>
+    <td colspan="2"></td>
+  </tr>
+</tbody>
+</table>
       </div>
     </div>
   </div>
@@ -771,5 +906,3 @@
   <audio id="vlap_audio" src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Velar_lateral_approximant.ogg"></audio>
 
   <audio id="ulap_audio" src="https://upload.wikimedia.org/wikipedia/commons/7/73/Uvular_lateral_approximant.ogg"></audio>
-
-</body>
