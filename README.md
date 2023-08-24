@@ -1,6 +1,7 @@
 <div class="hint" id="no_audio">
     <span>There is no recording <br>of this phoneme</span>
   </div>
+
   <div class="outer_container" id="selection">
     <label for="dialect">Select inventory:</label>
     <select name="dialect" id="dialect_selector">
@@ -24,201 +25,94 @@
       </div>
     </div>
     <div class="inner_container" id="vowels">
-      <div>
-        Monophthongs
-      </div>
-      <div id="monophthongs">
-        <svg class="vowel_canvas" id="mono_canvas" height="310" width="355"></svg>
-        <div class="vowel_overlay" id="mono_overlay">
-          <div class="cf vowel_pair" id="mono_cf">
-            <span class="phoneme vowel monophthong" id="mono_cfu">i</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel monophthong" id="mono_cfr" text-align="right">y</span>
-          </div>
-          <div class="cc vowel_pair" id="mono_cc">
-            <span class="phoneme vowel monophthong" id="mono_ccu">ɨ</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel monophthong" id="mono_ccr" text-align="right">ʉ</span>
-          </div>
-          <div class="cb vowel_pair" id="mono_cb">
-            <span class="phoneme vowel monophthong" id="mono_cbu">ɯ</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel monophthong" id="mono_cbr">u</span>
-          </div>
-          <div class="ncnf vowel_pair" id="mono_ncnf">
-            <span class="phoneme vowel monophthong" id="mono_ncnfu">ɪ</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel monophthong" id="mono_ncnfr" text-align="right">ʏ</span>
-          </div>
-          <div class="ncnb" id="mono_ncnb">
-            <span class="phoneme vowel monophthong" id="mono_ncnbr" text-align="right">ʊ</span>
-          </div>
-          <div class="cmf vowel_pair" id="mono_cmf">
-            <span class="phoneme vowel monophthong" id="mono_cmfu">e</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel monophthong" id="mono_cmfr" text-align="right">ø</span>
-          </div>
-          <div class="cmc vowel_pair" id="mono_cmc">
-            <span class="phoneme vowel monophthong" id="mono_cmcu">ɘ</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel monophthong" id="mono_cmcr" text-align="right">ɵ</span>
-          </div>
-          <div class="cmb vowel_pair" id="mono_cmb">
-            <span class="phoneme vowel monophthong" id="mono_cmbu">ɤ</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel monophthong" id="mono_cmbr" text-align="right">o</span>
-          </div>
-          <div class="mf vowel_pair" id="mono_mf">
-            <span class="phoneme vowel monophthong" id="mono_mfu">e̞</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel monophthong" id="mono_mfr" text-align="right">ø̞</span>
-          </div>
-          <div class="mc" id="mono_mc">
-            <span class="phoneme vowel monophthong" id="mono_mcv">ə</span>
-          </div>
-          <div class="mb vowel_pair" id="mono_mb">
-            <span class="phoneme vowel monophthong" id="mono_mbu">ɤ̞</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel monophthong" id="mono_mbr" text-align="right">o̞</span>
-          </div>
-          <div class="omf vowel_pair" id="mono_omf">
-            <span class="phoneme vowel monophthong" id="mono_omfu">ɛ</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel monophthong" id="mono_omfr" text-align="right">œ</span>
-          </div>
-          <div class="omc vowel_pair" id="mono_omc">
-            <span class="phoneme vowel monophthong" id="mono_omcu">ɜ</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel monophthong" id="mono_omcr" text-align="right">ɞ</span>
-          </div>
-          <div class="omb vowel_pair" id="mono_omb">
-            <span class="phoneme vowel monophthong" id="mono_ombu">ʌ</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel monophthong" id="mono_ombr" text-align="right">ɔ</span>
-          </div>
-          <div class="nof" id="mono_nof">
-            <span class="phoneme vowel monophthong" id="mono_nofv">æ</span>
-          </div>
-          <div class="noc" id="mono_noc">
-            <span class="phoneme vowel monophthong" id="mono_nocv">ɐ</span>
-          </div>
-          <div class="of vowel_pair" id="mono_of">
-            <span class="phoneme vowel monophthong" id="mono_ofu">a</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel monophthong" id="mono_ofr" text-align="right">ɶ</span>
-          </div>
-          <div class="oc vowel_pair" id="mono_oc">
-            <span class="phoneme vowel monophthong" id="mono_ocu">ä</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel monophthong" id="mono_ocr" text-align="right">ɶ̈</span>
-          </div>
-          <div class="ob vowel_pair" id="mono_ob">
-            <span class="phoneme vowel monophthong" id="mono_obu">ɑ</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel monophthong" id="mono_obr" text-align="right">ɒ</span>
-          </div>
+      <canvas id="canvas" height="310" width="500"></canvas>
+      <div id="overlay">
+        <div id="cf">
+          <span class="phoneme vowel" id="cfu">i</span>
+          <span class="sep">⬤</span>
+          <span class="phoneme vowel" id="cfr" text-align="right">y</span>
         </div>
-      </div>
-      <span>Diphthongs</span>
-      <div id="dipthongs">
-        <svg class="vowel_canvas" id="di_canvas" height="310" width="355" z-index="100">
-          <defs>
-            <marker id="arrowhead" markerWidth="5" markerHeight="3" 
-    refX="5" refY="1.5" orient="auto">
-      <polygon points="0 0, 5 1.5, 0 3" />
-    </marker>
-          </defs>
-          <line id="diphthong_arrow" x1="0" y1="50" x2="250" y2="50" stroke="#000" 
-  stroke-width="0" marker-end="url(#arrowhead)" />
-        </svg>
-        <div class="vowel_overlay" id="di_overlay">
-          <div class="cf vowel_pair" id="di_cf">
-            <span class="phoneme vowel diphthong" id="di_cfu">i</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel diphthong" id="di_cfr" text-align="right">y</span>
-          </div>
-          <div class="cc vowel_pair" id="di_cc">
-            <span class="phoneme vowel diphthong" id="di_ccu">ɨ</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel diphthong" id="di_ccr" text-align="right">ʉ</span>
-          </div>
-          <div class="cb vowel_pair" id="di_cb">
-            <span class="phoneme vowel diphthong" id="di_cbu">ɯ</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel diphthong" id="di_cbr">u</span>
-          </div>
-          <div class="ncnf vowel_pair" id="di_ncnf">
-            <span class="phoneme vowel diphthong" id="di_ncnfu">ɪ</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel diphthong" id="di_ncnfr" text-align="right">ʏ</span>
-          </div>
-          <div class="ncnb" id="di_ncnb">
-            <span class="phoneme vowel diphthong" id="di_ncnbr" text-align="right">ʊ</span>
-          </div>
-          <div class="cmf vowel_pair" id="di_cmf">
-            <span class="phoneme vowel diphthong" id="di_cmfu">e</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel diphthong" id="di_cmfr" text-align="right">ø</span>
-          </div>
-          <div class="cmc vowel_pair" id="di_cmc">
-            <span class="phoneme vowel diphthong" id="di_cmcu">ɘ</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel diphthong" id="di_cmcr" text-align="right">ɵ</span>
-          </div>
-          <div class="cmb vowel_pair" id="di_cmb">
-            <span class="phoneme vowel diphthong" id="di_cmbu">ɤ</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel diphthong" id="di_cmbr" text-align="right">o</span>
-          </div>
-          <div class="mf vowel_pair" id="di_mf">
-            <span class="phoneme vowel diphthong" id="di_mfu">e̞</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel diphthong" id="di_mfr" text-align="right">ø̞</span>
-          </div>
-          <div class="mc" id="di_mc">
-            <span class="phoneme vowel diphthong" id="di_mcv">ə</span>
-          </div>
-          <div class="mb vowel_pair" id="di_mb">
-            <span class="phoneme vowel diphthong" id="di_mbu">ɤ̞</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel diphthong" id="di_mbr" text-align="right">o̞</span>
-          </div>
-          <div class="omf vowel_pair" id="di_omf">
-            <span class="phoneme vowel diphthong" id="di_omfu">ɛ</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel diphthong" id="di_omfr" text-align="right">œ</span>
-          </div>
-          <div class="omc vowel_pair" id="di_omc">
-            <span class="phoneme vowel diphthong" id="di_omcu">ɜ</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel diphthong" id="di_omcr" text-align="right">ɞ</span>
-          </div>
-          <div class="omb vowel_pair" id="di_omb">
-            <span class="phoneme vowel diphthong" id="di_ombu">ʌ</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel diphthong" id="di_ombr" text-align="right">ɔ</span>
-          </div>
-          <div class="nof" id="di_nof">
-            <span class="phoneme vowel diphthong" id="di_nofv">æ</span>
-          </div>
-          <div class="noc" id="di_noc">
-            <span class="phoneme vowel diphthong" id="di_nocv">ɐ</span>
-          </div>
-          <div class="of vowel_pair" id="di_of">
-            <span class="phoneme vowel diphthong" id="di_ofu">a</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel diphthong" id="di_ofr" text-align="right">ɶ</span>
-          </div>
-          <div class="oc vowel_pair" id="di_oc">
-            <span class="phoneme vowel diphthong" id="di_ocu">ä</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel diphthong" id="di_ocr" text-align="right">ɶ̈</span>
-          </div>
-          <div class="ob vowel_pair" id="di_ob">
-            <span class="phoneme vowel diphthong" id="di_obu">ɑ</span>
-            <span class="sep">⬤</span>
-            <span class="phoneme vowel diphthong" id="di_obr" text-align="right">ɒ</span>
-          </div>
+        <div id="cc">
+          <span class="phoneme vowel" id="ccu">ɨ</span>
+          <span class="sep">⬤</span>
+          <span class="phoneme vowel" id="ccr" text-align="right">ʉ</span>
+        </div>
+        <div id="cb">
+          <span class="phoneme vowel" id="cbu">ɯ</span>
+          <span class="sep">⬤</span>
+          <span class="phoneme vowel" id="cbr">u</span>
+        </div>
+        <div id="ncnf">
+          <span class="phoneme vowel" id="ncnfu">ɪ</span>
+          <span class="sep">⬤</span>
+          <span class="phoneme vowel" id="ncnfr" text-align="right">ʏ</span>
+        </div>
+        <div id="ncnb">
+          <span class="phoneme vowel" id="ncnbr" text-align="right">ʊ</span>
+        </div>
+        <div id="cmf">
+          <span class="phoneme vowel" id="cmfu">e</span>
+          <span class="sep">⬤</span>
+          <span class="phoneme vowel" id="cmfr" text-align="right">ø</span>
+        </div>
+        <div id="cmc">
+          <span class="phoneme vowel" id="cmcu">ɘ</span>
+          <span class="sep">⬤</span>
+          <span class="phoneme vowel" id="cmcr" text-align="right">ɵ</span>
+        </div>
+        <div id="cmb">
+          <span class="phoneme vowel" id="cmbu">ɤ</span>
+          <span class="sep">⬤</span>
+          <span class="phoneme vowel" id="cmbr" text-align="right">o</span>
+        </div>
+        <div id="mf">
+          <span class="phoneme vowel" id="mfu">e̞</span>
+          <span class="sep">⬤</span>
+          <span class="phoneme vowel" id="mfr" text-align="right">ø̞</span>
+        </div>
+        <div id="mc">
+          <span class="phoneme vowel" id="mcv">ə</span>
+        </div>
+        <div id="mb">
+          <span class="phoneme vowel" id="mbu">ɤ̞</span>
+          <span class="sep">⬤</span>
+          <span class="phoneme vowel" id="mbr" text-align="right">o̞</span>
+        </div>
+        <div id="omf">
+          <span class="phoneme vowel" id="omfu">ɛ</span>
+          <span class="sep">⬤</span>
+          <span class="phoneme vowel" id="omfr" text-align="right">œ</span>
+        </div>
+        <div id="omc">
+          <span class="phoneme vowel" id="omcu">ɜ</span>
+          <span class="sep">⬤</span>
+          <span class="phoneme vowel" id="omcr" text-align="right">ɞ</span>
+        </div>
+        <div id="omb">
+          <span class="phoneme vowel" id="ombu">ʌ</span>
+          <span class="sep">⬤</span>
+          <span class="phoneme vowel" id="ombr" text-align="right">ɔ</span>
+        </div>
+        <div id="nof">
+          <span class="phoneme vowel" id="nofv">æ</span>
+        </div>
+        <div id="noc">
+          <span class="phoneme vowel" id="nocv">ɐ</span>
+        </div>
+        <div id="of">
+          <span class="phoneme vowel" id="ofu">a</span>
+          <span class="sep">⬤</span>
+          <span class="phoneme vowel" id="ofr" text-align="right">ɶ</span>
+        </div>
+        <div id="oc">
+          <span class="phoneme vowel" id="ocu">ä</span>
+          <span class="sep">⬤</span>
+          <span class="phoneme vowel" id="ocr" text-align="right">ɶ̈</span>
+        </div>
+        <div id="ob">
+          <span class="phoneme vowel" id="obu">ɑ</span>
+          <span class="sep">⬤</span>
+          <span class="phoneme vowel" id="obr" text-align="right">ɒ</span>
         </div>
       </div>
     </div>
@@ -588,53 +482,53 @@
         </table>
       </div>
       <div>
-        <table>
-          <tbody>
-            <tr>
-              <th></th>
-              <th colspan="2">Labial-<br>Velar</th>
-              <th>Labial-<br>Palatal</th>
-              <th>Palatal-<br>Velar</th>
-              <th>Velarized<br>Alveolar</th>
-            </tr>
-            <tr>
-              <th>Nasal</th>
-              <td colspan="2">
-                <span class="phoneme pconsonant" id="lvn">ŋ͡m</span>
-              </td>
-              <td></td>
-              <td></td>
-              <td></td>
-
-            </tr>
-            <tr>
-              <th>Plosive</th>
-              <td><span class="phoneme pconsonant" id="-lvp">k͡p</span></td>
-              <td><span class="phoneme pconsonant" id="lvp">ɡ͡b</span></td>
-              <td></td>
-              <td></td>
-              <td></td>
-
-            </tr>
-            <tr>
-              <th>Fricative/<br>Approximant</th>
-              <td><span class="phoneme pconsonant" id="-lvf">ʍ</span></td>
-              <td><span class="phoneme pconsonant" id="lvf">w</span></td>
-              <td><span class="phoneme pconsonant" id="lpa">ɥ</span></td>
-              <td><span class="phoneme pconsonant" id="pvf">ɧ</span></td>
-              <td><span class="phoneme pconsonant" id="valap">ɫ</span></td>
-
-            </tr>
-          </tbody>
-        </table>
+      <table>
+      <tbody>
+        <tr>
+        <th></th>
+          <th colspan="2">Labial-<br>Velar</th>
+          <th>Labial-<br>Palatal</th>
+          <th>Palatal-<br>Velar</th>
+          <th>Velarized<br>Alveolar</th>
+        </tr>
+        <tr>
+          <th>Nasal</th>
+        <td colspan="2">
+          <span class="phoneme pconsonant" id="lvn">ŋ͡m</span>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+          
+        </tr>
+        <tr>
+        <th>Plosive</th>
+        <td><span class="phoneme pconsonant" id="-lvp">k͡p</span></td>
+        <td><span class="phoneme pconsonant" id="lvp">ɡ͡b</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+          
+        </tr>
+        <tr>
+        <th>Fricative/<br>Approximant</th>
+        <td><span class="phoneme pconsonant" id="-lvf">ʍ</span></td>
+        <td><span class="phoneme pconsonant" id="lvf">w</span></td>
+        <td><span class="phoneme pconsonant" id="lpa">ɥ</span></td>
+        <td><span class="phoneme pconsonant" id="pvf">ɧ</span></td>
+        <td><span class="phoneme pconsonant" id="valap">ɫ</span></td>
+          
+        </tr>
+      </tbody>
+      </table>
       </div>
     </div>
     <div class="inner_container" id="npconsonants">
       <div>
-        <table>
-          <tbody>
-            <tr>
-              <th colspan="2"></th>
+<table>
+<tbody>
+  <tr>
+  <th colspan="2"></th>
               <th colspan="2">Bilabial</th>
               <th colspan="2">Labio-dental</th>
               <th colspan="2">Dental</th>
@@ -645,90 +539,90 @@
               <th colspan="2">Velar</th>
               <th colspan="2">Uvular</th>
               <th colspan="2">Pharyngeal/<br>epiglottal</th>
-            </tr>
-            <tr>
-              <th rowspan="4">Ejective</th>
-              <th>Stop</th>
-              <td colspan="2"><span class="phoneme npconsonant" id="bes">pʼ</span></td>
-              <td colspan="2"></td>
-              <td colspan="2"></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="aes">tʼ</span></td>
-              <td colspan="2"></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="res">ʈʼ</span></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="pes">cʼ</span></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="ves">kʼ</span></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="ues">qʼ</span></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="phes">ʡʼ</span></td>
-
-            </tr>
-            <tr>
-              <th>Fricative</th>
-              <td colspan="2"></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="ldef">fʼ</span></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="def">θʼ</span></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="aef">sʼ</span></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="paef">ʃʼ</span></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="ref">ʂʼ</span></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="pef">ɕʼ</span></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="vef">xʼ</span></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="uef">χʼ</span></td>
-              <td colspan="2"></td>
-            </tr>
-            <tr>
-              <th>Africate</th>
-              <td colspan="2"></td>
-              <td colspan="2"></td>
-              <td colspan="2"></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="aea">tsʼ</span></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="paea">t̠ʃʼ</span></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="rea">ʈʂʼ</span></td>
-              <td colspan="2"></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="vea">kxʼ</span></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="uea">qχʼ</span></td>
-              <td colspan="2"></td>
-            </tr>
-            <tr>
-              <th>Lateral</th>
-              <td colspan="2"></td>
-              <td colspan="2"></td>
-              <td colspan="2"></td>
-              <td><span class="phoneme npconsonant" id="alef">ɬʼ</span></td>
-              <td><span class="phoneme npconsonant" id="alea">tɬʼ</span></td>
-              <td colspan="2"></td>
-              <td colspan="2"></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="vlea">k𝼄ʼ</span></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="plea">c𝼆ʼ</span></td>
-              <td colspan="2"></td>
-              <td colspan="2"></td>
-            </tr>
-            <tr>
-              <th colspan="2">Click</th>
-              <td colspan="2"><span class="phoneme npconsonant" id="bc">k͡ʘ</span></td>
-              <td colspan="2"></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="dc">k͡ǀ </span></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="ac">k͡ǃ </span></td>
-              <td colspan="2"></td>
-              <td colspan="2"></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="pc">k͡ǂ </span></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="lvc">k͡ǁ</span></td>
-              <td colspan="2"></td>
-              <td colspan="2"></td>
-            </tr>
-            <tr>
-              <th colspan="2">Implosive</th>
-              <td colspan="2"><span class="phoneme npconsonant" id="bi">ɓ</span></td>
-              <td colspan="2"></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="di">ɗ</span></td>
-              <td colspan="2"></td>
-              <td colspan="2"></td>
-              <td colspan="2"></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="pi">ʄ</span></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="vi">ɠ</span></td>
-              <td colspan="2"><span class="phoneme npconsonant" id="ui">ʛ</span></td>
-              <td colspan="2"></td>
-            </tr>
-          </tbody>
-        </table>
+  </tr>
+  <tr>
+  <th rowspan="4">Ejective</th>
+  <th>Stop</th>
+    <td colspan="2"><span class="phoneme npconsonant" id="bes">pʼ</span></td>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="aes">tʼ</span></td>
+    <td colspan="2"></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="res">ʈʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="pes">cʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="ves">kʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="ues">qʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="phes">ʡʼ</span></td>
+    
+  </tr>
+  <tr>
+  <th>Fricative</th>
+    <td colspan="2"></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="ldef">fʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="def">θʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="aef">sʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="paef">ʃʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="ref">ʂʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="pef">ɕʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="vef">xʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="uef">χʼ</span></td>
+    <td colspan="2"></td>
+  </tr>
+  <tr>
+  <th>Africate</th>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="aea">tsʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="paea">t̠ʃʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="rea">ʈʂʼ</span></td>
+    <td colspan="2"></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="vea">kxʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="uea">qχʼ</span></td>
+    <td colspan="2"></td>
+  </tr>
+  <tr>
+  <th>Lateral</th>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+    <td><span class="phoneme npconsonant" id="alef">ɬʼ</span></td>
+    <td><span class="phoneme npconsonant" id="alea">tɬʼ</span></td>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="vlea">k𝼄ʼ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="plea">c𝼆ʼ</span></td>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+  </tr>
+  <tr>
+  <th colspan="2">Click</th>
+    <td colspan="2"><span class="phoneme npconsonant" id="bc">k͡ʘ</span></td>
+    <td colspan="2"></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="dc">k͡ǀ </span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="ac">k͡ǃ </span></td>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="pc">k͡ǂ </span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="lvc">k͡ǁ</span></td>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+  </tr>
+  <tr>
+  <th colspan="2">Implosive</th>
+    <td colspan="2"><span class="phoneme npconsonant" id="bi">ɓ</span></td>
+    <td colspan="2"></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="di">ɗ</span></td>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+    <td colspan="2"></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="pi">ʄ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="vi">ɠ</span></td>
+    <td colspan="2"><span class="phoneme npconsonant" id="ui">ʛ</span></td>
+    <td colspan="2"></td>
+  </tr>
+</tbody>
+</table>
       </div>
     </div>
   </div>
@@ -769,6 +663,7 @@
     <audio id="ocr_audio" src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Open_central_rounded_vowel.ogg"></audio>
     <audio id="obu_audio" src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Open_back_unrounded_vowel.ogg"></audio>
     <audio id="obr_audio" src="https://upload.wikimedia.org/wikipedia/commons/3/31/PR-open_back_rounded_vowel.ogg"></audio>
+  </div>
 
   <audio id="bn_audio" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Bilabial_nasal.ogg"></audio>
 
@@ -1010,4 +905,4 @@
 
   <audio id="vlap_audio" src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Velar_lateral_approximant.ogg"></audio>
 
-<audio id="ulap_audio" src="https://upload.wikimedia.org/wikipedia/commons/7/73/Uvular_lateral_approximant.ogg"></audio></div>
+  <audio id="ulap_audio" src="https://upload.wikimedia.org/wikipedia/commons/7/73/Uvular_lateral_approximant.ogg"></audio>

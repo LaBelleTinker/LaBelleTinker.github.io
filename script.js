@@ -28,7 +28,7 @@ var compressed = LZString.compressToEncodedURIComponent(string);
 string = LZString.decompressFromEncodedURIComponent(compressed);
 
 
-let drawLine = function(canvas, x1, y1, x2, y2) {
+let drawLine = function (canvas, x1, y1, x2, y2) {
   var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
   line.setAttribute('x1', x1);
   line.setAttribute('y1', y1);
@@ -39,13 +39,13 @@ let drawLine = function(canvas, x1, y1, x2, y2) {
   canvas.appendChild(line)
 }
 
-canvases.forEach(function(canvas, i, listObj) {
+canvases.forEach(function (canvas, i, listObj) {
   for (var coord of vowelChartLines) {
     drawLine(canvas, ...coord);
   }
 })
 
-let setPhoneme = function(phoneme, value) {
+let setPhoneme = function (phoneme, value) {
   phon = document.querySelector("#".concat(phoneme))
   var idx = inventory.indexOf(phoneme)
   if (value == 0) {
@@ -70,43 +70,43 @@ let setPhoneme = function(phoneme, value) {
   }
 }
 
-let updatePhonemeArrow = function(start=null, end=null) {
-if (start == null && end == null) {
-console.log("Error updating phoneme arrow")
-}
-else {
-if (start != null) {
-diArrow.setAttribute('x1', start[0])
-diArrow.setAttribute('y1', start[1])
-}
-if (end != null) {
-diArrow.setAttribute('x2', end[0])
-diArrow.setAttribute('y2', end[1])
-}
-}
+let updatePhonemeArrow = function (start = null, end = null) {
+  if (start == null && end == null) {
+    console.log("Error updating phoneme arrow")
+  }
+  else {
+    if (start != null) {
+      diArrow.setAttribute('x1', start[0])
+      diArrow.setAttribute('y1', start[1])
+    }
+    if (end != null) {
+      diArrow.setAttribute('x2', end[0])
+      diArrow.setAttribute('y2', end[1])
+    }
+  }
 }
 
-document.addEventListener('mousemove', function(e) {
-e.preventDefault()
+document.addEventListener('mousemove', function (e) {
+  e.preventDefault()
   let hint = document.getElementById('no_audio');
   let left = e.pageX;
   let top = e.pageY;
   hint.style.left = left + 'px';
   hint.style.top = top + 'px';
   if (e.buttons != 1) {
-  mouseDownOn = null
+    mouseDownOn = null
   }
   else if (mouseDownOn != null) {
-  mouse_left = e.pageX - $( "#di_overlay").offset().left
-  mouse_top = e.pageY -$( "#di_overlay").offset().top
-  updatePhonemeArrow(start=diCanvasPosition(mouseDownOn), 
-  end=[mouse_left, mouse_top])
-  diArrow.setAttribute('stroke-width', 3)
+    mouse_left = e.pageX - $("#di_overlay").offset().left
+    mouse_top = e.pageY - $("#di_overlay").offset().top
+    updatePhonemeArrow(start = diCanvasPosition(mouseDownOn),
+      end = [mouse_left, mouse_top])
+    diArrow.setAttribute('stroke-width', 3)
   }
 });
 
-document.addEventListener('mouseup', function(e) {
-diArrow.setAttribute('stroke-width', 0)
+document.addEventListener('mouseup', function (e) {
+  diArrow.setAttribute('stroke-width', 0)
 })
 
 dialectSelect.addEventListener('change', function handleChange(event) {
@@ -114,67 +114,67 @@ dialectSelect.addEventListener('change', function handleChange(event) {
   if (dialect == "null") {
     return
   }
-  phonemes.forEach(function(currentValue, currentIndex, listObj) {
+  phonemes.forEach(function (currentValue, currentIndex, listObj) {
     setPhoneme(currentValue.id, dialects[dialect].includes(currentValue.id) ? 1 : 0);
   })
 })
 
-diphthongs.forEach(function(currentValue, currentIndex, listObj) {
-  currentValue.addEventListener("contextmenu", function(e) {
+diphthongs.forEach(function (currentValue, currentIndex, listObj) {
+  currentValue.addEventListener("contextmenu", function (e) {
     e.preventDefault()
   })
-  currentValue.addEventListener("mousedown", function(e) {
-  e.preventDefault()
-if (e.buttons != 0) {
-mouseDownOn = currentValue.id
-}
+  currentValue.addEventListener("mousedown", function (e) {
+    e.preventDefault()
+    if (e.buttons != 0) {
+      mouseDownOn = currentValue.id
+    }
   })
   currentValue.addEventListener("mouseup", function (e) {
-  if (e.button == 0) {
-  if (mouseDownOn != null && currentValue.id != mouseDownOn) {
-  console.log("dragged from " + mouseDownOn + " to " + currentValue.id + ".")
-  console.log(diCanvasPosition(currentValue.id))
-  let arrow = document.createElementNS("http://www.w3.org/2000/svg", "line");
-  start = diCanvasPosition(mouseDownOn)
-  end = diCanvasPosition(currentValue.id)
-  start_name = mouseDownOn.split("_")[1]
-  end_name = currentValue.id.split("_")[1]
-  arrow_name = start_name + "_" + end_name
-  console.log(arrow_name)
-  arrow.setAttribute('x1', start[0])
-  arrow.setAttribute('y1', start[1])
-  arrow.setAttribute('x2', end[0])
-  arrow.setAttribute('y2', end[1])
-  arrow.setAttribute('id', arrow_name)
-  arrow.setAttribute('stroke', "#45a5ff")
-  arrow.setAttribute('stroke-width', 5)
-  arrow.setAttribute('marker-end', "url(#arrowhead)")
-  document.querySelector("#di_canvas").appendChild(arrow)
-  arrow.addEventListener('mousemove', function(e){console.log(arrow.id)})
-  }
-  }
-  }) 
+    if (e.button == 0) {
+      if (mouseDownOn != null && currentValue.id != mouseDownOn) {
+        console.log("dragged from " + mouseDownOn + " to " + currentValue.id + ".")
+        console.log(diCanvasPosition(currentValue.id))
+        let arrow = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        start = diCanvasPosition(mouseDownOn)
+        end = diCanvasPosition(currentValue.id)
+        start_name = mouseDownOn.split("_")[1]
+        end_name = currentValue.id.split("_")[1]
+        arrow_name = start_name + "_" + end_name
+        console.log(arrow_name)
+        arrow.setAttribute('x1', start[0])
+        arrow.setAttribute('y1', start[1])
+        arrow.setAttribute('x2', end[0])
+        arrow.setAttribute('y2', end[1])
+        arrow.setAttribute('id', arrow_name)
+        arrow.setAttribute('stroke', "#45a5ff")
+        arrow.setAttribute('stroke-width', 5)
+        arrow.setAttribute('marker-end', "url(#arrowhead)")
+        document.querySelector("#di_canvas").appendChild(arrow)
+        arrow.addEventListener('mousemove', function (e) { console.log(arrow.id) })
+      }
+    }
+  })
 })
 
-let diCanvasPosition = function(vowel) {
-let v = $( "#" + vowel );
-let c = $( "#di_overlay");
-let top = v.offset().top - c.offset().top + v.height() / 2;
-let left = v.offset().left - c.offset().left + v.width() / 2;
-return [left, top];
+let diCanvasPosition = function (vowel) {
+  let v = $("#" + vowel);
+  let c = $("#di_overlay");
+  let top = v.offset().top - c.offset().top + v.height() / 2;
+  let left = v.offset().left - c.offset().left + v.width() / 2;
+  return [left, top];
 }
 
 
 
-phonemes.forEach(function(currentValue, currentIndex, listObj) {
-  currentValue.addEventListener("contextmenu", function(e) {
+phonemes.forEach(function (currentValue, currentIndex, listObj) {
+  currentValue.addEventListener("contextmenu", function (e) {
     e.preventDefault()
   })
-  if (currentValue.classList.contains("diphthong")) {} else {
+  if (currentValue.classList.contains("diphthong")) { } else {
     if (document.getElementById(currentValue.id.concat("_", "audio")) == null) {
       currentValue.classList.add("norecording")
     }
-    currentValue.addEventListener("mouseup", function(e) {
+    currentValue.addEventListener("mouseup", function (e) {
       if (e.button == 2) {
         if (currentValue.classList.contains("norecording")) {
           hint = document.getElementById("no_audio");
@@ -196,18 +196,18 @@ phonemes.forEach(function(currentValue, currentIndex, listObj) {
   }
 });
 
-labels.forEach(function(currentValue, currentIndex, listObj) {
-  currentValue.addEventListener("mousedown", function(e) {
+labels.forEach(function (currentValue, currentIndex, listObj) {
+  currentValue.addEventListener("mousedown", function (e) {
     if (e.button == 0) {
       currentValue.classList.add("selected");
       inners = currentValue.offsetParent.offsetParent.querySelectorAll(".inner_container")
-      labels.forEach(function(label, i, obj) {
+      labels.forEach(function (label, i, obj) {
         if (label != currentValue) {
           label.classList.remove("selected")
         }
       })
-      inners.forEach(function(inner, innerIndex, innerListObj) {
-        if (inner.id == "labels") {} else if (inner.id == currentValue.id.split("_")[0]) {
+      inners.forEach(function (inner, innerIndex, innerListObj) {
+        if (inner.id == "labels") { } else if (inner.id == currentValue.id.split("_")[0]) {
           console.log("select" + currentValue.id);
           inner.style.display = "flex";
         } else {
